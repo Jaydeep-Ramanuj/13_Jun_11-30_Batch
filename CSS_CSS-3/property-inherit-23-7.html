@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 500px;
+        width: 500px;
+        background-color: wheat;
+        font-size: 32px;
+        color: red;
+        border: 1px solid red;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+      }
+      .child1 {
+        background-color: tomato;
+      }
+      .child2 {
+        background-color: yellowgreen;
+      }
+      .child3 {
+        background-color: violet;
+      }
+
+      .sub-child {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child child1">Child 1</div>
+      <div class="child child2">
+        Child 2
+        <div class="sub-child">sub-child</div>
+      </div>
+      <div class="child child3">Child 3</div>
+    </div>
+  </body>
+</html>

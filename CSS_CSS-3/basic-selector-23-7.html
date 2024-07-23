@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector (*) */
+      * {
+        border: 1px solid black;
+      }
+
+      /* tag selector  / type selector*/
+
+      p {
+        color: purple;
+      }
+
+      p {
+        color: red;
+        font-weight: 600;
+        background-color: rgba(0, 0, 255, 0.469);
+      }
+
+      b {
+        color: blue;
+      }
+      /* class selector (.) */
+      .big {
+        font-size: 32px;
+      }
+
+      .green-text {
+        color: green;
+      }
+
+      /* id selector (#) */
+
+      #underline {
+        text-decoration: underline;
+      }
+
+      /* group selector */
+      p,
+      .big,
+      #underline {
+        word-spacing: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="big">This is p tag</p>
+    <b>This is b tag</b>
+    <i class="green-text">This is i tag</i>
+    <div class="big">This is div tag</div>
+    <p class="green-text big" id="underline">This is second p tag</p>
+
+    <p>This is third p tag</p>
+  </body>
+</html>

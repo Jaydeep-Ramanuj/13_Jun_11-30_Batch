@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* child selector (>), it will select specified element from its own children */
+      /* .parent > .child {
+        border: 2px solid red;
+      } */
+
+      /* descendent selector ( ), it will select specified element from all of its decedents */
+
+      .parent .child {
+        border: 2px solid red;
+      }
+
+      .parent * {
+        margin: 2px;
+      }
+      .child {
+        /* margin: 3px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+        <div class="child">Child</div>
+      </div>
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+      </div>
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+        <div class="sub-child">Sub-child</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box::before {
+        content: 'Hello';
+        padding: 3px;
+        border-radius: 5px;
+        background-color: lightgray;
+        margin-right: 30px;
+      }
+      .box::after {
+        content: 'Bye';
+        padding: 3px;
+        border-radius: 5px;
+        background-color: #24252e;
+        margin-left: 30px;
+        color: white;
+      }
+      input {
+        margin: 50px;
+        height: 30px;
+      }
+      input::placeholder {
+        font-size: 18px;
+        font-weight: 600;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+    <input type="text" name="" id="name" placeholder="Enter your name" />
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 400px;
+        width: 300px;
+        border-radius: 12px;
+        background-image: url(https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&w=600);
+        color: whitesmoke;
+        margin: 50px auto;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: hidden;
+        transition: all 300ms;
+      }
+      .card p {
+        margin-top: 20px;
+      }
+      .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        opacity: 0;
+        transition: all 300ms;
+        margin-top: 150px;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.667)),
+          url(https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&w=600);
+
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+      }
+      .card:hover .content {
+        margin-top: 0;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h3>Someone</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+          incidunt necessitatibus esse, accusantium ratione maxime.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        padding: 10px;
+        background-color: beige;
+      }
+      .child {
+        /* width: fit-content; */
+        padding: 10px;
+        background-color: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        color: black;
+        margin: 10px;
+      }
+      /* it selects elements in which provided attribute exists */
+      /* .child[data-name] {
+        background-color: tomato;
+      } */
+
+      /* it selects elements in which provided attribute has exactly given value */
+      /* .child[data-name='vaibhav'] {
+        background-color: tomato;
+      } */
+
+      /* it selects elements in which provided attribute has space separated value */
+      /* .child[data-name~='vaibhav'] {
+        background-color: tomato;
+      } */
+
+      /* it selects elements in which provided attribute has hyphen separated value */
+      /* .child[data-name|='vaibhav'] {
+        background-color: tomato;
+      } */
+
+      /* it selects elements in which provided attribute which starts with provided value*/
+
+      /* .child[data-name^='vai'] {
+        background-color: tomato;
+      } */
+
+      /* it selects elements in which provided attribute which ends with provided value*/
+      /* .child[data-name$='bhav'] {
+        background-color: tomato;
+      } */
+      /* it selects elements in which provided attribute which has provided value */
+      .child[data-name*='bha'] {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">No attribute</div>
+      <div class="child" data-name="">null</div>
+      <div class="child" data-name="vaibhav">vaibhav</div>
+      <div class="child" data-name="vaibhav-001">vaibhav-001</div>
+      <div class="child" data-name="vaibhav110">vaibhav110</div>
+      <div class="child" data-name="001vaibhav110">001vaibhav110</div>
+      <div class="child" data-name="vai bhav">vai bhav</div>
+      <div class="child" data-name="vai_bhav">vai_bhav</div>
+      <div class="child" data-name="vai-bhav">vai-bhav</div>
+      <div class="child" data-name="vaibhavvaibhav">vaibhavvaibhav</div>
+      <div class="child" data-name="bhav">bhav</div>
+      <div class="child" data-name="vai">vai</div>
+    </div>
+  </body>
+</html>
+
+<!-- universal (*) -->
+<!-- group (,) -->
+<!-- type / tag (tag_name) -->
+<!-- id (#) -->
+<!-- class (.) -->
+
+<!-- combinator() -->
+<!-- descendent( ) -->
+<!-- child (>) -->
+<!-- adjacent sibling (+) -->
+<!-- general sibling (~) -->
+
+<!-- pseudo-class (:) -->
+<!-- pseudo-element(::) -->
+
+<!-- nth-child -->
+<!-- attribute selector -->

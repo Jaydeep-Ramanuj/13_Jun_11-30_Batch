@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background-color: #131121;
+        background-size: cover;
+        background-position: bottom;
+      }
+      .credit-card {
+        max-width: 400px;
+        height: 250px;
+        padding: 30px;
+        border-radius: 24px;
+        color: white;
+        margin: 150px auto;
+        background-color: rgba(177, 173, 173, 0.385);
+        position: relative;
+        /* filter: drop-shadow(); */
+        /* isolation: isolate; */
+        /* backdrop-filter: 5px; */
+        backdrop-filter: blur(5px);
+      }
+      .master-img,
+      .chip-img {
+        max-width: 60px;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card-info {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .name {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .expiry {
+        font-size: 14px;
+      }
+      .expiry span {
+        font-size: 18px;
+      }
+      .circle-1,
+      .circle-2 {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -5;
+      }
+
+      .circle-1 {
+        background-image: linear-gradient(#a000b4, #e7e2ea);
+        top: -75px;
+        left: -75px;
+      }
+      .circle-2 {
+        background-image: linear-gradient(#e7e2ea, #a000b4);
+        right: -75px;
+        bottom: -75px;
+      }
+    </style>
+  </head>
+  <body
+    background="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600"
+  >
+    <div class="credit-card">
+      <!-- <div class="circle-1"></div>
+      <div class="circle-2"></div> -->
+      <div class="top-bar">
+        <img
+          class="master-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/300px-MasterCard_Logo.svg.png"
+          alt=""
+        />
+        <span>Master Card </span
+        ><img class="chip-img" src="images/pngwing.com.png" alt="" />
+      </div>
+      <div class="card-info">
+        <h5>Card Number</h5>
+        <h2>8050 5040 2030 3020</h2>
+        <div class="wrapper">
+          <div class="name">Prem Kumar Shahi</div>
+          <div class="expiry">
+            valid till <br />
+            <span>05/28</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

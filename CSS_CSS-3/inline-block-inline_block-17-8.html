@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: inline;
+        height: 100px;
+        width: 300px;
+        background-color: tomato;
+      }
+      i {
+        display: block;
+        height: 100px;
+        width: 100px;
+        background-color: teal;
+      }
+
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        margin: 50px auto;
+      }
+
+      .child {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-color: tomato;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <i>This is i tag</i>
+    <b>This is b tag</b>
+    <p>This is p tag</p>
+    <div>This is div tag</div>
+
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+  </body>
+</html>

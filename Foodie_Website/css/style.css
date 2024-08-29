@@ -155,3 +155,208 @@ header .btn:hover {
   bottom: -50px;
   left: -200px;
 }
+
+/* .special-dishes-section */
+
+.special-dishes-section {
+  padding: var(--padding-primary);
+  margin-top: var(--section-top);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--bg-secondary-color);
+}
+.special-dishes-section .section-heading {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.special-dishes-section .special-dishes-list {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card {
+  border: 3px solid var(--bg-primary-color);
+  border-radius: 18px 48px;
+  max-width: 250px;
+  transition: all 300ms;
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card .dish-img {
+  position: relative;
+  transition: all 300ms;
+}
+
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card
+  .dish-img
+  .price {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: var(--text-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+}
+
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card:nth-child(1)
+  .dish-img
+  .price {
+  top: -10px;
+  right: 10px;
+}
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card:nth-child(2)
+  .dish-img
+  .price {
+  top: -10px;
+  right: -10px;
+}
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card:nth-child(3)
+  .dish-img
+  .price {
+  top: -10px;
+  right: -10px;
+}
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card:nth-child(4)
+  .dish-img
+  .price {
+  top: -10px;
+  right: 20px;
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card:hover {
+  background-color: var(--bg-primary-color);
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card .content {
+  text-align: center;
+  padding: 15px;
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card .content h3 {
+  color: var(--text-primary-color);
+}
+.special-dishes-section .special-dishes-list .special-dish-card .content p {
+  margin-top: 10px;
+  color: var(--text-secondary-color);
+}
+
+.special-dishes-section .special-dishes-list .special-dish-card img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.special-dishes-section
+  .special-dishes-list
+  .special-dish-card:hover
+  .dish-img {
+  transform: translateY(-20px);
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.286));
+}
+
+/* .featured-product-section */
+.featured-product-section {
+  padding: var(--padding-primary);
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+  background-color: var(--bg-secondary-color);
+}
+
+.featured-product-section .content {
+  width: 40%;
+}
+.featured-product-section img {
+  height: 400px;
+}
+
+.featured-product-section .content .btns {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.featured-product-section .content .btns .btn:nth-child(1) {
+  background-color: var(--text-primary-color);
+}
+
+/* .chef-section  */
+
+.chef-section {
+  padding: var(--padding-primary);
+  margin-top: var(--section-top);
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+}
+.chef-section img {
+  max-width: 400px;
+}
+
+.chef-section .content {
+  width: 50%;
+}
+
+.chef-section .content .chef-feature-list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-family-secondary);
+}
+
+.chef-section .content .chef-feature-list li {
+  list-style-type: none;
+  min-width: 45%;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 300ms;
+}
+
+.chef-section .content .chef-feature-list li:hover {
+  background-color: #e681433a;
+}
+
+.chef-section .content .chef-feature-list li::before {
+  content: '\2714';
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4702875;
+}
+
+.chef-section .content .btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  padding-left: 50px;
+}
+
+.chef-section .content .btns .btn:nth-child(1) {
+  background-color: var(--text-primary-color);
+}

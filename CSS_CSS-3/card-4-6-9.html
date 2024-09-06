@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 80vh;
+        background-image: linear-gradient(125deg, #f7cd35, #f83c37);
+      }
+      .card {
+        height: 300px;
+        max-width: 600px;
+        border-radius: 24px;
+        background-color: white;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding-left: 200px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      a {
+        width: fit-content;
+        text-decoration: none;
+        background-image: linear-gradient(125deg, #f7cd35, #f83c37);
+        color: white;
+        padding: 10px 25px;
+        border-radius: 16px;
+      }
+
+      .positioned-card {
+        height: 200px;
+        width: 200px;
+        /* background-color: tomato; */
+        background-image: linear-gradient(45deg, #f7cd35, #f83c37);
+        position: absolute;
+        left: -50px;
+        border-radius: 12px;
+      }
+
+      .circle {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: teal;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h5>6 September 2024</h5>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui officiis
+          distinctio culpa ullam neque enim accusamus laboriosam debitis dolore
+          quos.
+        </h4>
+        <a href="#">Read more</a>
+      </div>
+      <div class="positioned-card">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </body>
+</html>

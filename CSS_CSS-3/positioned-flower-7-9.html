@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .flower {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 300px;
+        position: relative;
+      }
+
+      .patal {
+        height: 200px;
+        width: 200px;
+        background-image: linear-gradient(#c82863, #fcc2e6);
+        border-radius: 0% 100% 14% 86% / 0% 84% 16% 100%;
+        position: absolute;
+      }
+      .flower-center {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-image: url(images/750908183_005dbd793f_c-removebg-preview.png);
+        background-position: 42% 46%;
+      }
+
+      .patal:nth-child(2) {
+        top: 240px;
+        left: 0px;
+        transform: rotate(45deg);
+      }
+      .patal:nth-child(3) {
+        top: 0px;
+        left: -240px;
+        transform: rotate(135deg);
+      }
+      .patal:nth-child(4) {
+        top: -240px;
+        left: 0px;
+        transform: rotate(225deg);
+      }
+      .patal:nth-child(5) {
+        top: 0px;
+        left: 240px;
+        transform: rotate(315deg);
+      }
+      .patal:nth-child(6) {
+        top: 170px;
+        left: -170px;
+        transform: rotate(90deg);
+      }
+      .patal:nth-child(7) {
+        top: -170px;
+        left: -170px;
+        transform: rotate(180deg);
+      }
+      .patal:nth-child(8) {
+        top: -170px;
+        left: 170px;
+        transform: rotate(270deg);
+      }
+      .patal:nth-child(9) {
+        top: 170px;
+        left: 170px;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flower">
+      <div class="flower-center"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <!-- <div class="patal"></div> -->
+      <!-- <div class="patal"></div> -->
+      <!-- <div class="patal"></div> -->
+      <!-- <div class="patal"></div> -->
+    </div>
+  </body>
+</html>

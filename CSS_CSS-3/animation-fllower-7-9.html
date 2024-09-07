@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .flower {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 200px;
+        position: relative;
+      }
+
+      .patal {
+        height: 200px;
+        width: 200px;
+        background-image: linear-gradient(#c82863, #fcc2e6);
+        /* background-image: linear-gradient(90deg, orange, white, green); */
+        border-radius: 0% 100% 14% 86% / 0% 84% 16% 100%;
+        position: absolute;
+        transform: rotate(45deg);
+        transition: all 1000ms;
+        /* transform-origin: 200px 200px; */
+        top: 100px;
+        left: 100px;
+        transform-origin: 0px 0px;
+      }
+      .flower-center {
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-image: url(images/750908183_005dbd793f_c-removebg-preview.png);
+        background-position: 42% 46%;
+        background-size: cover;
+        position: absolute;
+        top: 75px;
+        left: 75px;
+        opacity: 0;
+        transition: all 300ms 800ms;
+      }
+
+      .flower:hover .patal:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      .flower:hover .patal:nth-child(3) {
+        transform: rotate(135deg);
+      }
+      .flower:hover .patal:nth-child(4) {
+        transform: rotate(225deg);
+      }
+      .flower:hover .patal:nth-child(5) {
+        transform: rotate(315deg);
+      }
+      .flower:hover .patal:nth-child(6) {
+        transform: rotate(90deg);
+      }
+      .flower:hover .patal:nth-child(7) {
+        transform: rotate(180deg);
+      }
+      .flower:hover .patal:nth-child(8) {
+        transform: rotate(270deg);
+      }
+      .flower:hover .patal:nth-child(9) {
+        transform: rotate(360deg);
+      }
+
+      .flower:hover .flower-center {
+        z-index: 2;
+        opacity: 1;
+      }
+      .instruction {
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="instruction">Hover to see magic</div>
+    <div class="flower">
+      <div class="flower-center"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+      <div class="patal"></div>
+    </div>
+  </body>
+</html>

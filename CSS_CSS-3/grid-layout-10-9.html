@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        /* grid-template-columns: ; */
+        grid-template-rows: 50px 300px 100px;
+
+        /* grid-template-areas:
+          'header header header'
+          'article article aside'
+          '. footer footer'; */
+      }
+
+      header {
+        background-color: bisque;
+
+        /* grid-area: header; */
+        display: grid;
+        /* grid-template-columns: 100px 500px 200px; */
+
+        grid-template-areas: 'logo nav btns';
+
+        justify-content: center;
+
+        justify-items: center;
+        align-items: center;
+      }
+      main {
+        background-color: violet;
+        display: grid;
+        /* grid-template-columns: 20% 75%; */
+        gap: 30px;
+      }
+      footer {
+        background-color: turquoise;
+      }
+
+      article {
+        /* grid-area: article; */
+      }
+
+      .logo {
+        width: 200px;
+        grid-area: logo;
+      }
+      nav {
+        width: 500px;
+        grid-area: nav;
+      }
+      .btns {
+        width: 150px;
+        grid-area: btns;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Products</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div class="btns">
+        <button>Sign in</button>
+      </div>
+    </header>
+    <main>
+      <aside>This is aside</aside>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor pariatur
+        nobis, fugit modi ipsa totam dolorem, error illo placeat commodi
+        accusantium doloribus ex deleniti ea adipisci distinctio necessitatibus
+        dicta excepturi iusto rem sint voluptas, quaerat minus. Obcaecati at
+        quia odit mollitia a delectus magni consequatur dicta officiis pariatur,
+        cumque laboriosam nulla excepturi necessitatibus facere fuga, dolor,
+        fugit similique repellat deserunt ratione nemo ea est maxime. Repellat,
+        iusto rem dolorem excepturi distinctio dignissimos quo commodi sequi
+        quibusdam ut nihil doloremque dolore iste repellendus cum illum facere
+        ipsam veniam deserunt mollitia eligendi magni adipisci. Odit, explicabo
+        autem iusto, sint, tenetur expedita veritatis corrupti quidem dolorem
+        nobis dolore praesentium architecto laboriosam. Deserunt voluptatibus
+        exercitationem, tempora perferendis adipisci labore reprehenderit fuga
+        asperiores eius consequuntur iste unde soluta laboriosam minus ad
+        dolorum animi odio veritatis magnam modi. Maiores dolorem perferendis
+        fugit quae provident architecto aperiam, obcaecati, aliquam neque
+        voluptatibus, id fuga iusto sed molestiae expedita ipsum. Impedit minima
+        possimus at neque ea. Corporis hic veritatis aspernatur, explicabo
+        facere eveniet aliquam accusamus harum vero, eius facilis quidem earum,
+        tempore ipsam iure perferendis pariatur ullam impedit at repellendus!
+        Iure earum exercitationem minima magni dignissimos. Inventore dolorem
+        repellat, ipsa consequuntur sapiente doloremque corrupti magni
+        architecto, illum itaque molestias! Fuga, ab iure? Reiciendis iure id
+        rem suscipit corporis illo molestias! Aspernatur tempora eveniet
+        praesentium veritatis nihil fuga dolore fugit id ratione fugiat, sequi
+        eum aliquam repellendus porro, officiis nemo magni cupiditate nam. Aut
+        eum error deleniti laborum delectus, soluta reiciendis alias doloribus
+        harum, nulla aliquid. Repellat iusto consectetur fugiat. Aut voluptatum
+        fugit architecto facere! Commodi, nulla provident. Laudantium veniam
+        nemo hic ut provident quo porro sed voluptates. Sed minima assumenda
+        dolorum sunt aperiam? Neque, ea! Architecto, deleniti modi quod
+        doloribus dolorum iure rem. Ducimus voluptatem, porro dignissimos cum
+        reprehenderit neque temporibus non modi earum consectetur rem dolor
+        optio at.
+      </article>
+    </main>
+    <footer>
+      <div class="logo">LOGO</div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, cum.
+    </footer>
+  </body>
+</html>

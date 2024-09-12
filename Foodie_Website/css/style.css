@@ -14,7 +14,7 @@
   --text-secondary-color: #5d6474;
 
   --padding-primary: 0px 20px;
-  --section-top: 20px;
+  --section-top: 30px;
 
   --font-family-primary: 'David Libre', serif;
   --font-family-secondary: 'Inter', sans-serif;
@@ -149,10 +149,11 @@ header .btn:hover {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .hero-section .content {
-  max-width: 40%;
+  /* max-width: 40%; */
 }
 
 .hero-section .content .btns {
@@ -183,20 +184,21 @@ header .btn:hover {
 
 .hero-section .hero-img {
   position: relative;
+  margin-left: auto;
 }
 
 .hero-section .hero-img img:nth-child(1) {
-  height: 400px;
-  width: 300px;
+  height: 300px;
+  width: 200px;
   object-fit: cover;
   border-radius: 36px 12px;
 }
 
 .hero-section .hero-img img:nth-child(2) {
   position: absolute;
-  height: 250px;
-  bottom: -50px;
-  left: -200px;
+  height: 150px;
+  bottom: -30px;
+  left: -150px;
 }
 
 /* .special-dishes-section */
@@ -209,7 +211,6 @@ header .btn:hover {
   background-color: var(--bg-secondary-color);
 }
 .special-dishes-section .section-heading {
-  width: 50%;
   margin: 0 auto;
   text-align: center;
 }
@@ -217,9 +218,9 @@ header .btn:hover {
 .special-dishes-section .special-dishes-list {
   margin-top: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  row-gap: 30px;
+  row-gap: 40px;
 }
 
 .special-dishes-section .special-dishes-list .special-dish-card {
@@ -330,10 +331,9 @@ header .btn:hover {
 }
 
 .featured-product-section .content {
-  width: 40%;
 }
 .featured-product-section img {
-  height: 400px;
+  height: 300px;
 }
 
 .featured-product-section .content .btns {
@@ -358,11 +358,10 @@ header .btn:hover {
   flex-wrap: wrap;
 }
 .chef-section img {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .chef-section .content {
-  width: 50%;
 }
 
 .chef-section .content .chef-feature-list {
@@ -418,7 +417,6 @@ header .btn:hover {
 }
 
 .testimonails-section .section-heading {
-  width: 50%;
   text-align: center;
   margin: 0 auto;
 }
@@ -482,9 +480,8 @@ header .btn:hover {
 
 .newsletter-section .newsletter {
   height: 300px;
-  width: 80%;
   border-radius: 24px;
-  padding: 50px;
+  padding: 5px;
   margin: 0 auto;
   background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
@@ -495,8 +492,7 @@ header .btn:hover {
   margin-bottom: -50px;
 }
 .newsletter-section h2 {
-  width: 70%;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
   margin: 0 auto;
   color: var(--bg-primary-color);
@@ -505,24 +501,27 @@ header .btn:hover {
 }
 
 .newsletter-section form {
-  width: 60%;
+  width: fit-content;
   background-color: var(--bg-primary-color);
   border-radius: 16px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .newsletter-section form input {
-  height: 25px;
-  border: none;
+  display: block;
+  /* height: 25px; */
+  border: 2px solid lightgray;
+  padding: 8px;
+  border-radius: 8px;
   outline: none;
   font-size: 18px;
-  /* width: %; */
 }
 
 .newsletter-section form button {
@@ -533,11 +532,7 @@ header .btn:hover {
   text-align: center;
   border-radius: 6px;
   font-size: 18px;
-  padding: 15px 35px;
-}
-
-.spacer {
-  height: 300px;
+  padding: 8px 20px;
 }
 
 /* footer */

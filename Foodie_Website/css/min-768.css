@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  :root {
+    --padding-primary: 0px 80px;
+    --section-top: 30px;
+  }
+  .special-dishes-section .special-dishes-list {
+    column-gap: 50px;
+  }
+}

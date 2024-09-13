@@ -1,0 +1,38 @@
+@media (min-width: 576px) {
+  :root {
+    --padding-primary: 0px 60px;
+    --section-top: 30px;
+  }
+  header {
+    padding-top: 20px;
+  }
+
+  .hero-section {
+    justify-content: space-between;
+  }
+
+  .hero-section .content {
+    max-width: 40%;
+  }
+
+  .special-dishes-section .special-dishes-list {
+    justify-content: space-around;
+    row-gap: 60px;
+  }
+  .featured-product-section {
+    gap: 20px;
+  }
+  .featured-product-section .content {
+    width: 50%;
+  }
+  .chef-section {
+    gap: 0;
+  }
+  .chef-section .content {
+    width: 50%;
+  }
+
+  .newsletter-section .newsletter h2 {
+    width: 70%;
+  }
+}

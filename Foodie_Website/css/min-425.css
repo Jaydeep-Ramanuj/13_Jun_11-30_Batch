@@ -1,0 +1,21 @@
+@media (min-width: 425px) {
+  :root {
+    --padding-primary: 0px 40px;
+  }
+
+  .hero-section {
+    justify-content: center;
+  }
+
+  .hero-section .hero-img {
+    margin-left: 0px;
+  }
+
+  .hero-section .hero-img img:nth-child(1) {
+    width: 250px;
+  }
+
+  footer .footer-top .site-info {
+    max-width: 280px;
+  }
+}

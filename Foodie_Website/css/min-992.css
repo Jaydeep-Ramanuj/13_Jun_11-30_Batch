@@ -1,0 +1,26 @@
+@media (min-width: 992px) {
+  :root {
+    --padding-primary: 0px 100px;
+    --section-top: 30px;
+  }
+
+  #toggle-label {
+    display: none;
+  }
+
+  header .wrapper {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header nav {
+    flex-direction: row;
+  }
+
+  .special-dishes-section .special-dishes-list {
+    column-gap: 40px;
+  }
+}

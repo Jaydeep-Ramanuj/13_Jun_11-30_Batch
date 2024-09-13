@@ -1,0 +1,13 @@
+@media (min-width: 1100px) {
+  :root {
+    --padding-primary: 0px 100px;
+    --section-top: 30px;
+  }
+  .hero-section {
+    justify-content: space-around;
+  }
+
+  .special-dishes-section .special-dishes-list {
+    column-gap: 0px;
+  }
+}

@@ -1,7 +1,7 @@
 @media (min-width: 992px) {
   :root {
     --padding-primary: 0px 100px;
-    --section-top: 30px;
+    --section-top: 60px;
   }
 
   #toggle-label {

@@ -1,7 +1,7 @@
 @media (min-width: 1100px) {
   :root {
     --padding-primary: 0px 100px;
-    --section-top: 30px;
+    --section-top: 80px;
   }
   .hero-section {
     justify-content: space-around;

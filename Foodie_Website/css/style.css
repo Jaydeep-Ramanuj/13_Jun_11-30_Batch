@@ -186,6 +186,7 @@ header .btn:hover {
 .hero-section .hero-img {
   position: relative;
   margin-left: auto;
+  z-index: -1;
 }
 
 .hero-section .hero-img img:nth-child(1) {

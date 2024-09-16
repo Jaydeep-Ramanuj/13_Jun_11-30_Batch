@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 400px;
+        width: 400px;
+        background-image: url(https://images.pexels.com/photos/27731706/pexels-photo-27731706/free-photo-of-a-close-up-of-a-white-and-pink-flower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        border-radius: 12px;
+        margin: 50px auto;
+
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        isolation: isolate;
+      }
+
+      /* .box::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.301);
+        border-radius: 12px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+      } */
+
+      a {
+        text-decoration: none;
+
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+
+        position: relative;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 5px;
+        background-color: red;
+        transition: all 300ms;
+        width: 0%;
+      }
+
+      a:hover::before {
+        width: 100%;
+      }
+
+      .container {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner-box {
+        height: 100px;
+        width: 100px;
+        background-color: teal;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+
+      .container:hover + .inner-box {
+        background-color: yellow;
+      }
+
+      .ring {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Something</div>
+
+    <a href="#">Home</a>
+    <a href="#">Product</a>
+    <a href="#">Career</a>
+
+    <div class="container"></div>
+    <div class="inner-box"></div>
+
+    <div class="ring">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

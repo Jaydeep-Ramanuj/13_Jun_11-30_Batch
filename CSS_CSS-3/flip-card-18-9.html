@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: fit-content;
+        margin: 50px auto;
+        border-radius: 12px;
+        /* padding: 30px; */
+        /* border: 2px solid black; */
+      }
+      .card {
+        height: 250px;
+        width: 250px;
+        border-radius: 12px;
+        text-align: center;
+        color: lightgray;
+        position: relative;
+        border-radius: 12px;
+        transition: all 300ms;
+        backface-visibility: hidden;
+        /* transform-style: preserve-3d; */
+      }
+      p {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+      }
+
+      .side {
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .back {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        background-color: #24252e;
+        transition: all 300ms;
+        transform: rotateY(180deg);
+      }
+      .front {
+        background-image: url(https://images.pexels.com/photos/1382726/pexels-photo-1382726.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+        background-position: right;
+      }
+
+      .wrapper:hover .card {
+        transform: perspective(400px) rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <div class="side back">
+          <h2>Amisha</h2>
+          <h3>Cool Developer</h3>
+          <p>She is seasoned developer with expertise in Web development</p>
+        </div>
+        <div class="side front"></div>
+      </div>
+    </div>
+  </body>
+</html>

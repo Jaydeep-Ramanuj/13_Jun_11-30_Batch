@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 500px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.419);
+      }
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .sliding-box {
+        height: 300px;
+        width: 300px;
+        border-radius: 8px;
+        position: relative;
+
+        animation-name: slide;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+
+        background-image: url(images/186070-876973719_small.mp4);
+      }
+
+      .sliding-box video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0px);
+        }
+        to {
+          transform: translateX(1000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      This is some random text
+      <video src="images/186070-876973719_small.mp4" autoplay muted></video>
+    </div>
+
+    <div class="sliding-box">
+      <video src="images/186070-876973719_small.mp4" autoplay muted></video>
+    </div>
+
+    <script>
+      video = document.querySelector('.sliding-box video');
+      console.log(video);
+
+      videoURLList = [
+        'images/1573081-sd_640_360_30fps.mp4',
+        'images/19456239-sd_426_240_30fps.mp4',
+        'images/10225775-sd_640_360_30fps.mp4',
+        'images/5950966-sd_426_226_25fps.mp4',
+        'images/3150598-sd_426_240_25fps.mp4',
+      ];
+
+      videoURLIndex = 0;
+      function changeURL() {
+        video.setAttribute('src', videoURLList[videoURLIndex]);
+        videoURLIndex++;
+        videoURLIndex > 4 && (videoURLIndex = 0);
+      }
+
+      setInterval(() => {
+        changeURL();
+      }, 3000);
+    </script>
+  </body>
+</html>

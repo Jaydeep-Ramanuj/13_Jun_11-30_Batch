@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        height: 500px;
+        width: 500px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        height: 300px;
+        width: 300px;
+        background-color: teal;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+
+      .parent:hover .sub-child {
+        background-color: red;
+      }
+      .child:hover .sub-child {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child"></div>
+      </div>
+    </div>
+  </body>
+</html>

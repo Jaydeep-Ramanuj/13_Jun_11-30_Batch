@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* .child:nth-child(1):hover + .child:nth-child(2) {
+        background-color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="parent w-fit mx-auto mt-24 border flex gap-5">
+      <div
+        class="child w-96 h-96 rounded-md bg-red-300 text-[100px] font-bold peer/1"
+      >
+        1
+      </div>
+      <div
+        class="child w-96 h-96 rounded-md bg-red-300 text-[100px] font-bold peer-hover/1:bg-red-600 peer/2"
+      >
+        2
+      </div>
+      <div
+        class="child w-96 h-96 rounded-md bg-red-300 text-[100px] font-bold peer/3 peer-hover/2:bg-pink-600"
+      >
+        3
+      </div>
+      <div
+        class="child w-96 h-96 rounded-md bg-red-300 text-[100px] font-bold peer-hover/3:bg-orange-600"
+      >
+        4
+      </div>
+    </div>
+  </body>
+</html>

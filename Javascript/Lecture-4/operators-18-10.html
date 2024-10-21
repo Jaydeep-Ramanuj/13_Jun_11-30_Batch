@@ -25,6 +25,7 @@
       // To do self increment we can write,
       let number = 10;
 
+      // number = number + 10
       console.log('number += 10:', (number += 10)); // same as number = number + 10
       console.log('number -= 10:', (number -= 10)); // same as number = number - 10
       console.log('number *= 10:', (number *= 10)); // same as number = number * 10
@@ -54,12 +55,110 @@
       console.log('10 == 20:', 10 == 20);
       console.log('10 == 10:', 10 == 10);
 
-      // Logical operators
-      // Strict Equality operator
+      // Logical operators, when we need to deal with multiple conditions at that time we can use AND or OR operators
+
+      // AND (&&), it gives true only if ALL conditions are true
+
+      // Truth table
+      // 1 1 => 1
+      // 1 0 => 0
+      // 0 1 => 0
+      // 0 0 => 0
+
+      // OR (||), it gives true even if any condition is true
+
+      // Truth table
+      // 1 1 => 1
+      // 1 0 => 1
+      // 0 1 => 1
+      // 0 0 => 0
+
+      // NOT (!), it gives true if false, if false it gives true
+      // 1 => 0
+      // 0 => 1
+
+      console.log(10 < 5 && 20 > 10);
+
+      isDiwaliComing = true;
+      isSunday = false;
+
+      console.log(isDiwaliComing && isSunday);
+
+      if (isDiwaliComing && isSunday) {
+        console.log('Clean house');
+      }
+
+      let age = 120;
+      if (age > 18 && age < 80) {
+        console.log('Eligible for DL');
+      }
+
+      let isFestival = false;
+      isSunday = true;
+
+      if (isSunday || isFestival) {
+        console.log('Holiday');
+      } else {
+        console.log('Lecture');
+      }
+
+      isRunning = false;
+
+      if (!isRunning) {
+        console.log('He will get fat');
+      }
+
+      // Strict Equality operator, it check value as well as types of both operands
+
+      let n1 = 10;
+      let n2 = '10';
+
+      // typeof, it is used to check type of any variable
+
+      console.log('typeof n1: ', typeof n1);
+      console.log('typeof n2: ', typeof n2);
+
+      console.log('n1 == n2: ', n1 == n2);
+      console.log('n1 === n2: ', n1 === n2);
+
       // NOT Equality operator
+
+      console.log('10 == 20: ', 10 == 20);
+      console.log('10 != 20: ', 10 != 20);
+
       // Strict NOT Equality operator
+
+      console.log('10 === 10: ', 10 === '10');
+      console.log('10 !== "10": ', 10 !== '10');
+
       // Ternary operator
+
+      isSunday = true;
+
+      // if (isSunday) {
+      //   console.log('Holiday');
+      // } else {
+      //   console.log('Lecture');
+      // }
+
+      // condition ? if true execute this ? else execute this
+
+      // condition ? expression_1 : expression_2
+
+      isSunday ? console.log('Holiday') : console.log('Lecture');
+
       // Increment / decrement operator
+
+      let counter = 10;
+
+      // counter = counter + 1;
+      // counter += 1;
+
+      counter++; // increase by 1
+      console.log(counter);
+
+      counter--; // decrease by 1
+      console.log(counter);
     </script>
   </body>
 </html>

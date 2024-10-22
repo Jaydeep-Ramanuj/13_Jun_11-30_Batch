@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="some">Something</div>
+
+    <div id="other">Other</div>
+
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+
+    <p>This is p tag</p>
+    <p class="para">This is p tag with para class</p>
+    <p class="para">This is 2nd p tag with para class</p>
+    <p id="thing">This is p tag with thing id</p>
+
+    <input type="text" name="username" id="" placeholder="Enter your name" />
+    <input type="email" name="email" id="" placeholder="Enter your email" />
+
+    <script>
+      //   DOM API, DOM stands for Document Object Model, it provides interface between HTML and JS
+
+      //   API stands for, Application Programming Interface
+
+      // DOM tree, it is visual representation of HTML structure
+
+      // DOM Selectors
+
+      // 1. getElementById()
+      // 2. getElementsByClassName()
+      // 3. getElementsByTagName()
+      // 4. getElementsByName()
+      // 5. querySelector()
+      // 6. querySelectorAll()
+
+      // ======
+
+      // 1. getElementById(), it is used to select an element using id, returns single element
+
+      let some = document.getElementById('some');
+
+      let other = document.getElementById('other');
+
+      console.log(some);
+
+      console.log(other);
+
+      // 2. getElementsByClassName(), it is used to select all elements having specified class name, returns HTMLCollections
+
+      let cards = document.getElementsByClassName('card');
+      let firstCard = document.getElementsByClassName('card')[0];
+
+      console.log(cards);
+      console.log(cards[1]);
+      console.log(firstCard);
+
+      // 3. getElementsByTagName(), it is used to select all elements having specified tag name, returns HTMLCollections
+
+      let pEles = document.getElementsByTagName('p');
+
+      console.log(pEles);
+
+      // 4. getElementsByName(), it is used to select all elements having specified name, returns NodeList
+      let username = document.getElementsByName('username');
+      let email = document.getElementsByName('email');
+
+      console.log(username);
+      console.log(email);
+
+      // 5. querySelector(), it is used to get an element using css like query, return single element
+
+      let pTagWithParaClass = document.querySelector('p.para');
+      let secondCard = document.querySelector('.card:nth-child(4)');
+
+      console.log(pTagWithParaClass);
+      console.log(secondCard);
+
+      // 6. querySelectorAll(), it is used to get all elements that selects using css like query, return NodeList
+
+      allPWithParaClasses = document.querySelectorAll('p.para');
+      console.log(allPWithParaClasses);
+
+      // ====
+
+      let htmlEle = document.getRootNode();
+
+      console.log(htmlEle);
+
+      let head = document.head;
+      let body = document.body;
+
+      console.log(head);
+      console.log(body);
+    </script>
+  </body>
+</html>

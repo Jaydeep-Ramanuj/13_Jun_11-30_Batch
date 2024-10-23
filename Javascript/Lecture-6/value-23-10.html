@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <div class="input some">
+          <label for="name"> Name </label>
+          <input
+            type="text"
+            name="username"
+            id="name"
+            placeholder="Ex. Jay Shah"
+            required
+            maxlength="30"
+          />
+        </div>
+
+        <div class="input">
+          <label for="email"> Email </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Ex. jay.shah@gmail.com"
+            required
+            minlength="3"
+            maxlength="30"
+          />
+        </div>
+        <div class="input">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Ex. 9638527110"
+            pattern="[0-9]{10}"
+          />
+        </div>
+        <div class="input">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" required />
+        </div>
+        <div class="input">
+          <label for="">Gender: </label>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" required />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" required />
+        </div>
+        <div class="input">
+          <label for="city">City</label>
+          <select name="city" id="city" required>
+            <option value="rjt" selected>Rajkot</option>
+            <option value="brd">Baroda</option>
+            <option value="srt">Surat</option>
+            <option value="abd">Ahmedabad</option>
+            <option value="mbm" disabled>Mumbai</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Professional Details</legend>
+        <div class="input">
+          <label for="college">College</label>
+          <input
+            type="text"
+            name="collage-list"
+            id=""
+            placeholder="Ex. Atmiya University"
+            list="college-list"
+            required
+          />
+
+          <datalist id="college-list">
+            <option value="Atmiya University">Atmiya University</option>
+            <option value="Nirma University">Nirma University</option>
+            <option value="Marwadi University">Marwadi University</option>
+            <option value="Saurstra University">Saurstra University</option>
+            <option value="Darshan University">Darshan University</option>
+          </datalist>
+        </div>
+
+        <div class="input">
+          <label for="grade">Grade</label>
+          <input
+            type="number"
+            name="grade"
+            id="grade"
+            placeholder="Ex. 90"
+            required
+          />
+        </div>
+
+        <div class="input">
+          <label for="experience">Experience</label>
+          <input
+            type="text"
+            name="exp"
+            id="experience"
+            placeholder="Ex. Technical lead at ..."
+          />
+        </div>
+        <div class="input">
+          <label for="resume">Resume: </label>
+          <input type="file" name="resume" id="resume" required />
+        </div>
+        <div class="input">
+          <label for="about">Tell us about yourself</label>
+          <textarea
+            name="about"
+            id=""
+            placeholder="Tell us yourself"
+          ></textarea>
+        </div>
+        <button>Submit</button> <input type="reset" name="" id="" />
+      </fieldset>
+    </form>
+
+    <script>
+      let userName = document.getElementsByName('username')[0];
+      let email = document.getElementsByName('email')[0];
+      let phone = document.getElementsByName('phone')[0];
+      let dob = document.getElementsByName('dob')[0];
+      let gender = document.getElementsByName('gender')[0];
+      let city = document.getElementsByName('city')[0];
+      let collage = document.getElementsByName('collage-list')[0];
+      let grade = document.getElementsByName('grade')[0];
+      let exp = document.getElementsByName('exp')[0];
+      let resume = document.getElementsByName('resume')[0];
+      let about = document.getElementsByName('about')[0];
+
+      let submitBtn = document.getElementsByTagName('button')[0];
+
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        console.log(userName.value);
+
+        console.log(email.value);
+
+        console.log(phone.value);
+
+        console.log(dob.value);
+
+        console.log(gender.value);
+
+        console.log(city.value);
+
+        console.log(collage.value);
+
+        console.log(grade.value);
+
+        console.log(exp.value);
+
+        console.log(resume.value);
+
+        console.log(about.value);
+
+        userName.value = 'Smart Amisha';
+      });
+    </script>
+  </body>
+</html>

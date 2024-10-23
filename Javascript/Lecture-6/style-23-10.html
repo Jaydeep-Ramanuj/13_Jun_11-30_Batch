@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">Box</div>
+    <button>Change Style</button>
+    <script>
+      let box = document.querySelector('.box');
+      let btn = document.querySelector('button');
+
+      btn.addEventListener('click', () => {
+        // box.style.color = 'white';
+        // box.style.width = 'fit-content';
+        // box.style.border = '1px solid black';
+        // box.style.padding = '10px';
+        // box.style.borderRadius = '6px';
+        // box.style.margin = '50px auto';
+        // box.style.backgroundColor = '#24252e';
+
+        box.style.cssText =
+          'width:fit-content; color:white; border:1px solid black; padding:10px; margin:50px auto; border-radius:16px; background-color:tomato';
+
+        let blackStyle =
+          'width:fit-content; color:white; border:1px solid black; padding:10px; margin:50px auto; border-radius:6px; background-color:#24252e';
+        let redStyle =
+          'width:fit-content; color:white; border:1px solid black; padding:10px; margin:50px auto; border-radius:16px; background-color:tomato';
+
+        // box.style.cssText = blackStyle;
+        box.style.cssText = redStyle;
+
+        let appliedBoxStyle = window.getComputedStyle(box);
+
+        console.log(appliedBoxStyle.borderRadius);
+        console.log(appliedBoxStyle.position);
+        console.log(appliedBoxStyle.display);
+      });
+    </script>
+  </body>
+</html>

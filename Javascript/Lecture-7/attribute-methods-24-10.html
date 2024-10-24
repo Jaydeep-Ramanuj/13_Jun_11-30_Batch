@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+      alt="Image Not Loading"
+    />
+
+    <button class="btn-1">1</button>
+    <button class="btn-2">2</button>
+    <button class="btn-3">3</button>
+    <button class="remove">Remove</button>
+    <button class="clear">Clear</button>
+
+    <script>
+      let btn1 = document.querySelector('.btn-1');
+      let btn2 = document.querySelector('.btn-2');
+      let btn3 = document.querySelector('.btn-3');
+      let remove = document.querySelector('.remove');
+      let clear = document.querySelector('.clear');
+      let img = document.querySelector('img');
+
+      //   console.log(img);
+      console.log(img.getAttribute('alt'));
+      console.log(img.getAttribute('src'));
+      console.log(btn1.getAttribute('class'));
+
+      btn1.addEventListener('click', () => {
+        img.setAttribute(
+          'src',
+          'https://images.pexels.com/photos/2080960/pexels-photo-2080960.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+        );
+      });
+      btn2.addEventListener('click', () => {
+        img.setAttribute(
+          'src',
+          'https://images.pexels.com/photos/3689659/pexels-photo-3689659.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+        );
+      });
+      btn3.addEventListener('click', () => {
+        img.setAttribute(
+          'src',
+          'https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+        );
+      });
+
+      remove.addEventListener('click', () => {
+        img.removeAttribute('src');
+      });
+      clear.addEventListener('click', () => {
+        img.setAttribute('src', '');
+      });
+    </script>
+  </body>
+</html>

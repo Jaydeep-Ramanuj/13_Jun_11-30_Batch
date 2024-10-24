@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      Dhara
+      <!-- This is something -->
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child" id="special">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+
+    <script>
+      let parent = document.getElementsByClassName('parent')[0];
+      let special = document.getElementById('special');
+
+      //   console.log(parent);
+      // console.log(parent.children); // it returns all element children
+      //   console.log(parent.childNodes); // it returns all child nodes
+
+      console.log(parent.childElementCount);
+      console.log(parent.children.length);
+
+      //   parent.childNodes[1].data = 'This is new comment changed by Js.'; // we can change comment like this
+
+      //   console.log(parent.firstElementChild); // returns first element child
+      //   console.log(parent.lastElementChild); // // returns last element child
+
+      //   console.log(parent.firstChild); //returns first node child
+
+      //   parent.firstChild.textContent = 'some'; // we can change textContent of text node like this
+
+      //   console.log(special);
+      //   console.log(special.parentElement); // returns parent Element
+      //   console.log(special.parentNode); // returns parent Node
+
+      //   console.log(special.parentElement.parentElement.parentElement);
+
+      //   console.log(special.nextElementSibling); // returns next element sibling
+      //   console.log(special.previousElementSibling); // returns previous element sibling
+    </script>
+  </body>
+</html>

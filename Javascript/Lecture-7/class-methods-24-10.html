@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .stuti {
+        font-size: 24px;
+        font-weight: 600;
+        background-color: pink;
+      }
+
+      .amisha {
+        height: 100px;
+        width: fit-content;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box some else dhara" id="special">Something</div>
+
+    <button class="get">Get ClassList</button>
+    <button class="add">Add Class</button>
+    <button class="remove">Remove Class</button>
+    <button class="toggle">Toggle Class</button>
+
+    <script>
+      let box = document.querySelector('.box');
+
+      let getClassList = document.querySelector('.get');
+      let addClass = document.querySelector('.add');
+      let removeClass = document.querySelector('.remove');
+      let toggleClass = document.querySelector('.toggle');
+
+      //   console.log(box);
+      //   console.log(box.id);
+
+      //   console.log(box.className);
+      //   console.log(box.className.split(' ')[1]);
+      //   console.log(box.classList);
+
+      //   box.classList.add('red');
+      //   box.classList.remove('else');
+
+      console.log(box.classList.contains('dhara1'));
+
+      getClassList.addEventListener('click', () => {
+        console.log(box.className);
+        console.log(box.classList);
+      });
+      addClass.addEventListener('click', () => {
+        // box.classList.add('p1', 'p2', 'p3');
+        let inpClass = prompt('Enter your class name you want to add :');
+        box.classList.add(inpClass);
+      });
+      removeClass.addEventListener('click', () => {
+        let inpClass = prompt('Enter your class name you want to remove :');
+        box.classList.remove(inpClass);
+      });
+      toggleClass.addEventListener('click', () => {
+        // let inpClass = prompt('Enter your class name you want to toggle :');
+        box.classList.toggle('amisha');
+      });
+    </script>
+  </body>
+</html>

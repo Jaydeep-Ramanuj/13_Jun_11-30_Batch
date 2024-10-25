@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        padding: 30px;
+        border: 2px solid black;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This first 1, already present</p>
+      <p>This first 2, already present</p>
+      <p>This first 3, already present</p>
+    </div>
+
+    <script>
+      let box = document.querySelector('.box');
+
+      let newEle = document.createElement('h1');
+      let desg = document.createElement('h4');
+      newEle.textContent = 'Dhara';
+      desg.textContent = 'Web Developer';
+      // console.log(newEle);
+
+      let button = document.createElement('button');
+      button.textContent = 'click me';
+
+      box.append(newEle);
+      box.prepend(desg);
+
+      let line1 = document.createElement('i');
+      let line2 = document.createElement('i');
+      let line3 = document.createElement('i');
+      let line4 = document.createElement('i');
+
+      line1.textContent = 'beforebegin'; // insert element before the given element (outside)
+      line2.textContent = 'afterbegin'; // insert element before already present elements (inside) like prepend
+      line3.textContent = 'beforeend'; // insert element after already present elements (inside) like append
+      line4.textContent = 'afterend'; // insert element after the given element (outside)
+
+      box.insertAdjacentElement('beforebegin', line1);
+      box.insertAdjacentElement('afterbegin', line2);
+      box.insertAdjacentElement('beforeend', line3);
+      box.insertAdjacentElement('afterend', line4);
+
+      // document
+      //   .querySelector('p:nth-child(3)')
+      //   .insertAdjacentElement('afterend', button);
+
+      document.querySelector('p:nth-child(3)').after(button);
+      // document.querySelector('p:nth-child(3)').before(button);
+    </script>
+  </body>
+</html>

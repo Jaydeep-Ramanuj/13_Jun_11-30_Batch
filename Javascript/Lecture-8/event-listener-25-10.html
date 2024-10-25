@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dark {
+        background-color: #24252e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline event, it is written directly inside html element -->
+    <!-- <button onclick="console.log('Button Clicked')">Click me</button> -->
+    <!-- <button onclick="run()">Click me</button> -->
+
+    <button class="click">Click</button>
+    <button class="double-click">Double Click</button>
+    <button class="mouse-enter">Mouse enter</button>
+    <button class="mouse-leave">Mouse leave</button>
+
+    <button class="dark-mode">Dark mode</button>
+
+    <script>
+      let click = document.querySelector('.click');
+      let dblClick = document.querySelector('.double-click');
+      let mouseEnter = document.querySelector('.mouse-enter');
+      let mouseLeave = document.querySelector('.mouse-leave');
+
+      click.addEventListener('click', () => {
+        console.log('Button Clicked');
+      });
+      dblClick.addEventListener('dblclick', () => {
+        console.log('Button Double Clicked');
+      });
+      //   mouseEnter.addEventListener('mouseenter', () => {
+      //     console.log('Mouse enter');
+      //   });
+      mouseEnter.addEventListener('mouseover', (e) => {
+        console.log(e);
+        console.log('Mouse hover');
+      });
+      mouseLeave.addEventListener('mouseleave', () => {
+        console.log('Mouse leave');
+      });
+
+      window.addEventListener('load', () => {
+        console.log('Welcome guys');
+      });
+
+      document.addEventListener('keydown', (event) => {
+        // console.log('Key pressed');
+        console.log(event);
+        // console.log(event.key);
+        // console.log(event.keyCode);
+        // console.log(event.code);
+      });
+
+      let darkBtn = document.querySelector('.dark-mode');
+      document.addEventListener('keydown', (e) => {
+        console.log(e.key);
+
+        if (e.key == 'Z' && e.ctrlKey && e.shiftKey) {
+          document.body.style.backgroundColor = '#24252e';
+        }
+      });
+
+      // This is another way to add event listener
+
+      darkBtn.onclick = (e) => {
+        console.log(e);
+        console.log('Dark mode button Clicked');
+      };
+    </script>
+  </body>
+</html>

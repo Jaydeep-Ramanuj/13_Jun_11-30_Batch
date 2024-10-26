@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 800px;
+        width: 600px;
+        background-color: aquamarine;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        position: relative;
+        top: 100px;
+      }
+      .item {
+        height: 100px;
+        width: 100px;
+        background-color: purple;
+      }
+      .item1 {
+        position: static;
+      }
+      .item2 {
+        position: fixed;
+        top: 100px;
+        left: 100px;
+      }
+      .item3 {
+        position: sticky;
+        top: 200px;
+      }
+      .item4 {
+        position: absolute;
+        bottom: 50px;
+      }
+      .specer {
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+    </div>
+    <div class="specer"></div>
+  </body>
+</html>

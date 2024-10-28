@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="todo p-2 rounded mx-auto mt-10 border w-fit">
+      <div class="header flex gap-3">
+        <input
+          type="text"
+          class="block p-2 bg-gray-200 rounded h-full"
+          name="task"
+          id=""
+          placeholder="Enter your task "
+        />
+        <button class="block p-2 bg-orange-300 rounded h-full">Add</button>
+      </div>
+      <ul class="task-list mt-3"></ul>
+      <script>
+        let input = document.getElementsByName('task')[0];
+        let btn = document.getElementsByTagName('button')[0];
+        let taskList = document.querySelector('.task-list');
+
+        btn.addEventListener('click', () => {
+          let taskDetail = input.value;
+
+          let newTask = document.createElement('li');
+          let taskContent = document.createElement('span');
+          let delIcon = document.createElement('i');
+          let newTaskCheck = document.createElement('input');
+          newTaskCheck.setAttribute('type', 'checkbox');
+
+          newTask.className =
+            'p-1 pl-3 bg-gray-100 rounded flex items-center gap-3';
+          newTaskCheck.className = 'peer cursor-pointer';
+          delIcon.className =
+            'bi bi-trash3-fill text-red-300 ml-auto cursor-pointer';
+
+          delIcon.setAttribute('onclick', 'deleteTask(this)');
+
+          taskContent.className =
+            ' peer-checked:line-through decoration-4 decoration-red-700';
+          taskContent.textContent = taskDetail;
+
+          console.log(newTask);
+
+          newTask.prepend(newTaskCheck);
+          newTask.append(taskContent);
+          newTask.append(delIcon);
+
+          taskList.append(newTask);
+        });
+
+        function deleteTask(element) {
+          element.parentElement.style.display = 'none';
+          //   element.parentElement.remove();
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 500px;
+        width: 500px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        height: 300px;
+        width: 300px;
+        background-color: teal;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child"></div>
+      </div>
+    </div>
+
+    <script>
+      let parent = document.querySelector('.parent');
+      let child = document.querySelector('.child');
+      let subChild = document.querySelector('.sub-child');
+
+      parent.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Parent Clicked');
+      });
+      child.addEventListener('click', () => {
+        console.log('Child Clicked');
+      });
+      subChild.addEventListener('click', (e) => {
+        console.log('Sub Child Clicked');
+      });
+      document.body.addEventListener('click', () => {
+        console.log('Body Clicked');
+      });
+      document.addEventListener('click', () => {
+        console.log('HTML Clicked');
+      });
+    </script>
+  </body>
+</html>

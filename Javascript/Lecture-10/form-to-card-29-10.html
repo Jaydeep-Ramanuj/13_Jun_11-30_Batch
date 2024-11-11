@@ -212,7 +212,10 @@
       let cardsList = document.getElementsByClassName('cards')[0];
 
       btn.addEventListener('click', (e) => {
+        // we get an Event object from EventListener which we use to prevent default behavior
+
         e.preventDefault();
+
         let newCard = document.createElement('div');
         newCard.className =
           'bg-gray-100 h-screen flex items-center justify-center p-2';

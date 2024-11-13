@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let day = 'Monday';
+      //   console.log(1);
+      //   console.log(2);
+
+      // ==========
+      // if
+      // ==========
+
+      //   syntax
+      //   if (condition) {
+      //     // code , this will be executed if given condition is true
+      //   }
+
+      //   if (day == 'Sunday') {
+      //     console.log(3);
+      //     console.log(4);
+      //     console.log(5);
+      //   }
+
+      //   console.log('This line will be printed after if statement');
+
+      // ==========
+      // if else
+      // ==========
+
+      //   Syntax
+      //   if (condition) {
+      //     // code, this code will execute if condition is true
+      //   } else {
+      //     // code, this code will execute if condition is false
+      //   }
+
+      let age = 17;
+
+      if (age >= 18) {
+        console.log('You are eligible to get Driving License');
+      } else {
+        console.log('You are NOT eligible to get Driving License');
+      }
+
+      let isAmishaHuman = false;
+      let isAmishaLeavingOnEarth = true;
+
+      if (isAmishaHuman && isAmishaLeavingOnEarth) {
+        console.log('Yes she is Human and leaves on earth');
+      } else {
+        console.log('Nope, She is monster according to her friend stuti');
+      }
+
+      // ==========
+      // else if ladder
+      // ==========
+
+      //   if (condition_1) {
+      //     // code, this code will execute it condition_1 is true
+      //   } else if (condition_2) {
+      //     // code, this code will execute it condition_1 is false but condition_2 is true
+      //   } else if (condition_3) {
+      //     // code, this code will execute it condition_1 and condition_2 is false but condition_3 is true
+      //   } else {
+      //     // code, this code will execute if all above conditions are false
+      //   }
+
+      let day = 'mon';
+      if (day == 'sun') {
+        console.log('Sunday');
+      } else if (day == 'mon') {
+        console.log('Monday');
+      } else if (day == 'tue') {
+        console.log('Tuesday');
+      } else if (day == 'wed') {
+        console.log('Wednesday');
+      } else if (day == 'tue') {
+        console.log('Thursday');
+      } else if (day == 'fri') {
+        console.log('Friday');
+      } else if (day == 'sat') {
+        console.log('Saturday');
+      } else {
+        console.log('Please write correct day');
+      }
+
+      // ==========
+      // Nested if-else
+      // ==========
+
+      // syntax
+
+      //   if (condition_1) {
+      //     if (condition_2) {
+      //       // code, this code will execute if condition_1 and condition_2 both are true
+      //     } else {
+      //       // code, this code will execute if condition_1 is true but condition_2 is false
+      //     }
+      //   } else {
+      //     // code, this code will execute if condition_1 is false
+      //   }
+
+      let isDoreamonExist = true;
+      let willDoreamonGiveAnywhereDoor = true;
+
+      if (isDoreamonExist) {
+        if (willDoreamonGiveAnywhereDoor) {
+          console.log('I will go to Japan every day and come back');
+        } else {
+          console.log('I will ask for bambucopter');
+        }
+      } else {
+        console.log('No, Jiyan will bully me');
+      }
+    </script>
+  </body>
+</html>

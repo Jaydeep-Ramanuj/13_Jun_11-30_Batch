@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <button
+      class="px-3 py-1 rounded-md bg-blue-400 m-4 hover:bg-blue-500 active:scale-90 transition-all text-white font-semibold"
+    >
+      Make Cards
+    </button>
+    <div id="cards" class="flex justify-evenly flex-wrap"></div>
+
+    <!-- <article
+      class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto mt-24"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a"
+        alt="University of Southern California"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"
+      ></div>
+      <h3 class="z-10 mt-3 text-3xl font-bold text-white">Paris</h3>
+      <div class="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+        City of love
+      </div>
+    </article> -->
+
+    <script>
+      const btn = document.querySelector('button');
+      const cardsList = document.querySelector('#cards');
+
+      let cities = [
+        {
+          src: 'https://www.theindia.co.in/_next/image?url=https%3A%2F%2Fapi.theindia.co.in%2Fstorage%2Fimage%2Fplaces%2Fbanner%2Fatal-sarovar-92117.jpg&w=3840&q=75',
+          name: 'Rajkot',
+          tag: 'Rangilu City',
+        },
+        {
+          src: 'https://www.agoda.com/wp-content/uploads/2024/05/Nahargarh-Fort-jaipur-india-1244x700.jpg',
+          name: 'Jaipur',
+          tag: 'the pink city',
+        },
+        {
+          src: 'https://content.r9cdn.net/rimg/dimg/0c/7d/93d68796-city-44523-164940ea619.jpg?crop=true&width=1020&height=498',
+          name: 'Jodhpur',
+          tag: 'the Blue city',
+        },
+        {
+          src: 'https://sabarmatiriverfront.com/wp-content/uploads/2022/08/Iconic-Foot-Over-Bridge-at-riverfront.jpeg',
+          name: 'Ahmedabad',
+          tag: 'the Manchester of India',
+        },
+        {
+          src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Evening_view%2C_City_Palace%2C_Udaipur.jpg/1200px-Evening_view%2C_City_Palace%2C_Udaipur.jpg',
+          name: 'Udaipur',
+          tag: 'the city of lakes',
+        },
+        {
+          src: 'https://www.birlatrimayaa.in/images/birla/about-bangalore.webp',
+          name: 'Bangalore',
+          tag: 'the Silicon Valley of India',
+        },
+        {
+          src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Green_City_Jamshedpur.jpg',
+          name: 'Jamshedpur',
+          tag: 'the steel city',
+        },
+        {
+          src: 'https://imgcld.yatra.com/ytimages/image/upload/t_yt_blog_c_fill_q_auto:good_f_auto_w_800_h_500/v1533715205/Kumortuli876_1533714780.jpg',
+          name: 'Kolkata',
+          tag: 'city of joy',
+        },
+        {
+          src: 'https://www.skywaytour.com/media/gallery/2024-08-05-10-35-43-coorg01.jpg',
+          name: 'Coorg',
+          tag: 'the Scotland of India',
+        },
+        {
+          src: 'https://cdn.britannica.com/28/170728-050-AD5F144B/Great-Imambara-Lucknow-Uttar-Pradesh-India.jpg',
+          name: 'Lucknow',
+          tag: 'the city of Nawabs',
+        },
+        {
+          src: 'https://static.tnnbt.in/thumb/msid-113553969,thumbsize-1949635,width-1280,height-720,resizemode-75/113553969.jpg',
+          name: 'Varanasi',
+          tag: 'the city of temples',
+        },
+        {
+          src: 'https://static.wixstatic.com/media/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg',
+          name: 'Amritsar',
+          tag: 'the Golden city',
+        },
+        {
+          src: 'https://static.wixstatic.com/media/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3417b6_9d136d18669d49d6ae8315c01402a94d~mv2.jpg',
+          name: 'Amritsar',
+          tag: 'the Golden city',
+        },
+        {
+          src: 'https://i.ytimg.com/vi/Q8O9vUG4d2s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCPcKmtOwR3JH9DtCa6zjdaQ9C6KA',
+          name: 'Chennai',
+          tag: 'the Detroit of south',
+        },
+        {
+          src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/A_typical_charminar_evening.jpg/680px-A_typical_charminar_evening.jpg',
+          name: 'Hyderabad',
+          tag: 'the city of pearls',
+        },
+        {
+          src: 'https://digital.ihg.com/is/image/ihg/intercontinental-mumbai-8302439950-2x1',
+          name: 'Mumbai',
+          tag: 'the financial capital of India',
+        },
+        {
+          src: 'https://i.ytimg.com/vi/ilXmOihy09c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDscqo4K50q9EMCbMvT4NgwWgs4aw',
+          name: 'Surat',
+          tag: 'the city of diamonds',
+        },
+      ];
+
+      // Rajkot - Rangilu City
+      // Jaipur – the pink city
+      // Jodhpur – the Blue/Sun city
+      // Udaipur – the city of lakes
+      // Ahmedabad – the Manchester of India
+      // Bangalore – the Silicon Valley of India
+      // Jamshedpur – the steel city
+      // Kolkata –  city of joy
+      // Coorg – the Scotland of India
+      // Lucknow – the city of Nawabs
+      // Varanasi – the city of temples
+      // Amritsar – the Golden city
+      // Chennai – the Detroit of south
+      // Hyderabad – the city of pearls
+      // Mumbai – the financial capital of India
+
+      btn.addEventListener('click', () => {
+        for (let i = 0; i < cities.length; i++) {
+          let newCard = document.createElement('div');
+          newCard.className =
+            'relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto mt-24 min-w-[400px]';
+          newCard.innerHTML = `<img
+        src="${cities[i].src}"
+        alt="${cities[i].name}"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"
+      ></div>
+      <h3 class="z-10 mt-3 text-3xl font-bold text-white">${cities[i].name}</h3>
+      <div class="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+       ${cities[i].tag}
+      </div>`;
+
+          console.log(newCard);
+          cards.append(newCard);
+        }
+      });
+    </script>
+  </body>
+</html>

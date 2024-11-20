@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="first" placeholder="Enter first number" />
+    <input type="text" name="" id="second" placeholder="Enter second number" />
+
+    <button class="add">+</button>
+    <button class="multi">*</button>
+    <h1>Result is: <span id="output"></span></h1>
+
+    <script>
+      const firstInp = document.querySelector('#first');
+      const secondInp = document.querySelector('#second');
+      const addBtn = document.querySelector('.add');
+      const multiBtn = document.querySelector('.multi');
+      const output = document.querySelector('#output');
+
+      addBtn.addEventListener('click', () => {
+        let firstInpVal = firstInp.value;
+        let secondInpVal = secondInp.value;
+
+        // let result = parseInt(firstInpVal) + parseInt(secondInpVal);
+        let result = Number(firstInpVal) + Number(secondInpVal);
+
+        output.innerText = result;
+      });
+      multiBtn.addEventListener('click', () => {
+        let firstInpVal = firstInp.value;
+        let secondInpVal = secondInp.value;
+        let result = Number(firstInpVal) * Number(secondInpVal);
+
+        output.innerText = result;
+      });
+    </script>
+  </body>
+</html>

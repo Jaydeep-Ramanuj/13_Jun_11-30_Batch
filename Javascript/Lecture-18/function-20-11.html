@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="inp1" />
+    <input type="text" name="" id="inp2" />
+    <h1 id="output"></h1>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('%')">%</button>
+    <script>
+      // Syntax
+
+      // function definition
+
+      //   function function_name(parameter_1,parameter_1,... ) {
+      //     // code, this code will execute when we call this function
+      //   }
+
+      //   function calling
+      //   function_name(argument_1, argument_2,...);
+
+      // =========
+      // =========
+
+      //   function makeBodyDark() {
+      //     document.body.style.backgroundColor = '#24252e';
+      //   }
+
+      //   makeBodyDark();
+
+      //   function sum() {
+      //     console.log(10 + 20);
+      //   }
+
+      //   sum();
+
+      // =========
+      // =========
+
+      let output = document.querySelector('#output');
+      let inp1 = document.querySelector('#inp1');
+      let inp2 = document.querySelector('#inp2');
+
+      function sum() {
+        output.innerText = Number(inp1.value) + Number(inp2.value);
+        // console.log(num1 + num2);
+      }
+
+      //   sum(541351, 2121);
+
+      function mul(num1, num2) {
+        output.innerText = num1 * num2;
+      }
+
+      //   mul(541351, 2121);
+      //   mul(Number(inp1.value), Number(inp2.value));
+
+      function calculate(operation) {
+        switch (operation) {
+          case '+':
+            // console.log(prompt('Enter your value'));
+
+            output.innerText = Number(inp1.value) + Number(inp2.value);
+            break;
+          case '-':
+            output.innerText = Number(inp1.value) - Number(inp2.value);
+            break;
+          case '*':
+            output.innerText = Number(inp1.value) * Number(inp2.value);
+            break;
+          case '/':
+            output.innerText = Number(inp1.value) / Number(inp2.value);
+            break;
+          case '%':
+            output.innerText = Number(inp1.value) % Number(inp2.value);
+            break;
+        }
+      }
+
+      console.info('This is some info');
+      console.error('This is some critical error');
+
+      function sumOfAllItems(i1, i2, i3, i4) {
+        let result = i1 + i2 + i3 + i4;
+        return result;
+      }
+
+      let total = sumOfAllItems(10, 20, 30, 40, 50);
+      console.log(total);
+
+      function sumOfArrayItems(items) {
+        let result = 0;
+        for (let i = 0; i < items.length; i++) {
+          result += items[i];
+        }
+        return result;
+      }
+
+      let totalOfAllArrayItems = sumOfArrayItems([
+        10, 20, 30, 40, 50, 60, 70, 80, 90, 100,
+      ]);
+      console.log(totalOfAllArrayItems);
+    </script>
+  </body>
+</html>

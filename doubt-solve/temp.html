@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marksheet for Information Technology</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      .container {
+        width: 260px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.248);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h3 {
+        text-align: center;
+      }
+      .form-item {
+        margin-bottom: 10px;
+      }
+      .form-item label {
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .form-item input {
+        padding: 6px;
+        width: 90%;
+        box-sizing: border-box;
+      }
+      .result {
+        margin-top: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      button {
+        width: 90%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>marksheet for information technology</h3>
+      <form>
+        <div class="form-item">
+          <label for="cLanguage">C Language:</label>
+          <input type="number" id="cLanguage" required />
+        </div>
+        <div class="form-item">
+          <label for="cppLanguage">C++ Language:</label>
+          <input type="number" id="cppLanguage" required />
+        </div>
+        <div class="form-item">
+          <label for="dataBase">DataBase:</label>
+          <input type="number" id="dataBase" required />
+        </div>
+        <div class="form-item">
+          <label for="html">HTML:</label>
+          <input type="number" id="html" required />
+        </div>
+        <div class="form-item">
+          <label for="css">CSS:</label>
+          <input type="number" id="css" required />
+        </div>
+        <div class="form-item">
+          <label for="php">PHP:</label>
+          <input type="number" id="php" required />
+        </div>
+        <div class="form-item">
+          <label for="corejava">CoreJava:</label>
+          <input type="number" id="corejava" required />
+        </div>
+        <input  type="submit" onclick="calculateMarksheet(event);">RESULT</input>
+      </form>
+      <div> total is: <span id="total"></span></div>
+      <div> percentage is:<span id="percentage"> </span></div>
+      
+    </div>
+    <script>
+      function calculateMarksheet(event) {
+        event.preventDefault();
+        
+        let cLanguage = parseInt(document.querySelector("#cLanguage").value);
+        let cppLanguage = parseInt(
+          document.querySelector("#cppLanguage").value
+        );
+        let database = parseInt(document.querySelector("#dataBase").value);
+        let html = parseInt(document.querySelector("#html").value);
+        let css = parseInt(document.querySelector("#css").value);
+        let php = parseInt(document.querySelector("#php").value);
+        let coreJava = parseInt(document.querySelector("#corejava").value);
+
+        let totalMarks =
+          cLanguage + cppLanguage + database + html + css + php + coreJava;
+
+          console.log(totalMarks)
+          
+          let maxMarks = 350;
+          let percentage = (totalMarks / maxMarks) * 100;
+          console.log(percentage)
+
+        
+        document.querySelector("#total").innerHTML = totalMarks;
+          
+
+        document.querySelector("#percentage").innerHTML = percentage =
+          (totalMarks / maxMarks) * 100;
+      }
+    </script>
+  </body>
+</html>

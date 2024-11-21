@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: grey;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Something</div>
+
+    <button>Bg color change</button>
+
+    <script>
+      let btn = document.querySelector('button');
+      let clickCount = 0;
+      let colors = [
+        'red',
+        'pink',
+        'blue',
+        'yellow',
+        'skyblue',
+        'green',
+        'orange',
+      ];
+      btn.addEventListener('click', () => {
+        console.log('button clicked');
+
+        // if (clickCount == 0) {
+        //   document.body.style.backgroundColor = colors[clickCount];
+        // } else if (clickCount == 1) {
+        //   document.querySelector('.box').style.backgroundColor =
+        //     colors[clickCount];
+        // } else {
+        //   document.body.style.backgroundColor = 'red';
+        // }
+        // document.querySelector('.box').style.backgroundColor = 'red';
+
+        switch (clickCount) {
+          case 0:
+            document.body.style.backgroundColor = colors[clickCount];
+            break;
+          case 1:
+            document.querySelector('.box').style.backgroundColor =
+              colors[clickCount];
+            break;
+          default:
+            document.body.style.backgroundColor = 'red';
+        }
+        clickCount++;
+      });
+    </script>
+  </body>
+</html>

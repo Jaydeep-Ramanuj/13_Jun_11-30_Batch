@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn1">Click here</button>
+    <button class="btn2">Click here</button>
+    <button class="btn3">Click here</button>
+    <button class="btn4">Click here</button>
+    <script>
+      // Anonymous function, such function does not have any name, they can be used to pass some logic to another function or object, can be used to give logic to some variables
+
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+
+      //   sum();
+
+      function printHello() {
+        console.log('Hello Btn1');
+      }
+
+      const btn1 = document.querySelector('.btn1');
+      const btn2 = document.querySelector('.btn2');
+      const btn3 = document.querySelector('.btn3');
+      const btn4 = document.querySelector('.btn4');
+
+      btn1.addEventListener('click', printHello);
+
+      btn2.addEventListener('click', function printHello() {
+        console.log('Hello Btn2');
+      });
+
+      btn3.addEventListener('click', function () {
+        console.log('Hello Btn3');
+      });
+
+      btn4.addEventListener('click', () => {
+        console.log('Hello Btn4');
+      });
+
+      // function definition
+
+      function greet(name) {
+        console.log('Good morning,' + name);
+      }
+
+      //   function expression
+
+      let doGreet = (name) => {
+        console.log('Good morning,' + name);
+      };
+
+      doGreet('Jay');
+
+      //   IIFE , Immediately Invoked Function expression
+
+      (() => {
+        // console.log('Sommmmme');
+        document.body.style.backgroundColor = '#24252e';
+      })();
+    </script>
+  </body>
+</html>

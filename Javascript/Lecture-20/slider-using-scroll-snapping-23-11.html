@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Snap Slider</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        font-family: sans-serif;
+      }
+
+      .scroll-slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        width: 600px;
+        height: 300px;
+      }
+
+      .slide {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .slide img {
+        width: 100%;
+        height: auto;
+      }
+
+      .scroll-slider::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-slider">
+      <div class="slide">
+        <img
+          src="https://via.placeholder.com/600x300?text=Slide+1"
+          alt="Slide 1"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://via.placeholder.com/600x300?text=Slide+2"
+          alt="Slide 2"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://via.placeholder.com/600x300?text=Slide+3"
+          alt="Slide 3"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://via.placeholder.com/600x300?text=Slide+4"
+          alt="Slide 4"
+        />
+      </div>
+    </div>
+
+    <script>
+      // JavaScript is optional here, as the slider will work without it due to CSS scroll snapping.
+      // However, you can add custom functionality if needed.
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const slider = document.querySelector('.scroll-slider');
+        const slides = document.querySelectorAll('.slide');
+
+        // Example: Auto-scroll every 3 seconds
+        let currentSlide = 0;
+
+        function autoScroll() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          slider.scroll({
+            left: currentSlide * slider.offsetWidth,
+            behavior: 'smooth',
+          });
+        }
+
+        setInterval(autoScroll, 3000);
+      });
+    </script>
+  </body>
+</html>
+
+<!-- more ways to make Sliders -->
+
+<!-- translateX 
+
+position
+
+scroll snapping 
+
+order
+
+display
+
+z-index
+
+attribute
+
+append / remove element
+
+Opacity
+
+Visibility
+
+Scroll -->

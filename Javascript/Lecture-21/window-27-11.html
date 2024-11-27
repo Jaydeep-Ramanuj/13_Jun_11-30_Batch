@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="openSomeThing()">Open</button>
+    <button onclick="openSomeThingInNewWindow()">Open in new window</button>
+    <button onclick="window.close()">Close</button>
+    <button onclick="stopPrinting()">Stop</button>
+    <script>
+      console.log(window);
+
+      //   window.alert('Hello!!!');
+
+      function openSomeThing() {
+        window.open('https://www.amazon.in/');
+      }
+      function openSomeThingInNewWindow() {
+        window.open(
+          'https://www.amazon.in/',
+          '_blank',
+          'width=500, height=500'
+        );
+      }
+
+      console.log('1');
+      console.log('3');
+
+      myTimeout = setTimeout(() => {
+        console.log('2');
+      }, 3000);
+
+      let num = 0;
+      let myInterval = setInterval(() => {
+        num++;
+        console.log(num);
+        // console.log('Hi');
+      }, 500);
+
+      function stopPrinting() {
+        clearInterval(myInterval);
+        clearTimeout(myTimeout);
+      }
+    </script>
+  </body>
+</html>

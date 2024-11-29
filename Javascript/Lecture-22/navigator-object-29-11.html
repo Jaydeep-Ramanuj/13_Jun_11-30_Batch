@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="getGeoLocation()">Get Location</button>
+    <script>
+      console.log(window);
+      console.log(window.navigator);
+
+      function getGeoLocation() {
+        console.log(
+          window.navigator.geolocation.getCurrentPosition((response) => {
+            console.log(response.coords);
+            console.log('lat:', response.coords.latitude);
+            console.log('long:', response.coords.longitude);
+          })
+        );
+      }
+    </script>
+  </body>
+</html>

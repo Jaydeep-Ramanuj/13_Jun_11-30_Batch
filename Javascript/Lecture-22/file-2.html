@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>File 2</h1>
+    <br />
+    <button onclick="goToPreviousPage()">Go to previous page (file-1)</button>
+    <br />
+    <button onclick="goToForwardPage()">Go to forward page</button>
+
+    <br />
+    <a href="file-1.html">Go to file-1</a> <br />
+    <a href="file-3.html">Go to file-3</a>
+
+    <script>
+      function goToPreviousPage() {
+        window.history.back();
+      }
+      function goToForwardPage() {
+        window.history.forward();
+      }
+
+      //   setTimeout(() => {
+      //     goToPreviousPage();
+      //   }, 3000);
+    </script>
+  </body>
+</html>

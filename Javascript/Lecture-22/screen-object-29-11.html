@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      console.log(window);
+      console.log(window.screen);
+
+      //   availWidth / availHeight, represents actual screen size - extra elements like taskbar
+      console.log(screen.availWidth);
+      console.log(screen.availHeight);
+
+      //   width / height, represents actual screen size
+      console.log(screen.width);
+      console.log(screen.height);
+
+      //   innerWidth / innerHeight , represent available size to show our website (viewport)
+      console.dir(window.innerWidth);
+      console.dir(window.innerHeight);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>File 3</h1>
+
+    <br /><button onclick="goToPreviousPage()">
+      Go to previous page (file-2)
+    </button>
+    <br /><button onclick="goToNumberPage()">Go to 2 previous page</button>
+
+    <br />
+    <a href="file-2.html">Go to file-2</a> <br />
+    <a href="file-1.html">Go to file-1</a>
+
+    <script>
+      function goToPreviousPage() {
+        window.history.back();
+      }
+      function goToNumberPage() {
+        window.history.go(-2);
+      }
+    </script>
+  </body>
+</html>

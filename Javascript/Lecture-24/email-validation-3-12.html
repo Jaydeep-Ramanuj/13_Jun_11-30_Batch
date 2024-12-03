@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="email" />
+    <button>Submit</button>
+
+    <script>
+      email = document.querySelector('#email');
+      btn = document.querySelector('button');
+
+      btn.addEventListener('click', () => {
+        // console.log(validateEmail(email.value));
+        console.log(validateEmailUsingRegex(email.value));
+      });
+
+      function validateEmail(emailVal) {
+        let isEmpty;
+        let hasDot;
+        let hasAt;
+        let isAtAndDotTogether;
+        let isSomethingBeforeAt;
+        let isSomethingAfterDot;
+
+        isEmpty = emailVal.length == 0;
+        hasDot = emailVal.includes('.');
+        hasAt = emailVal.includes('@');
+        isAtAndDotTogether = emailVal.includes('@.') || emailVal.includes('.@');
+        isSomethingBeforeAt =
+          emailVal.slice(0, emailVal.indexOf('@')).length != 0;
+        isSomethingAfterDot =
+          emailVal.slice(emailVal.indexOf('.'), -1).length != 0;
+
+        // console.log('isEmpty: ', isEmpty);
+        // console.log('hasDot: ', hasDot);
+        // console.log('hasAt: ', hasAt);
+        // console.log('isAtAndDotTogether: ', isAtAndDotTogether);
+        // console.log('isSomethingBeforeAt: ', isSomethingBeforeAt);
+        // console.log('isSomethingAfterDot: ', isSomethingAfterDot);
+
+        return (
+          !isEmpty &&
+          hasAt &&
+          hasDot &&
+          !isAtAndDotTogether &&
+          isSomethingAfterDot &&
+          isSomethingBeforeAt
+        );
+      }
+
+      function validateEmailUsingRegex(emailVal) {
+        regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return regex.test(emailVal);
+      }
+    </script>
+  </body>
+</html>

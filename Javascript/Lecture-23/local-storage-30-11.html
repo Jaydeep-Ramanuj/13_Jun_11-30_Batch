@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function setDataToLocalStorage(name, city, country) {
+        localStorage.setItem('name', name);
+        localStorage.setItem('city', city);
+        localStorage.setItem('country', country);
+      }
+
+      setDataToLocalStorage('Jinal', 'Jetpur', 'India');
+
+      function getDataFromLocalStorage() {
+        console.log(localStorage);
+      }
+
+      getDataFromLocalStorage();
+    </script>
+  </body>
+</html>

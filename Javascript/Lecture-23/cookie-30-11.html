@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   document.cookie = 'name=dhara;';
+      //   document.cookie = 'name=jinal';
+      //   document.cookie = 'city=rajkot';
+      //   document.cookie = 'country=india';
+
+      function setCookie(name, city, country) {
+        document.cookie = `name=${name}`;
+        document.cookie = `city=${city}`;
+        document.cookie = `country=${country}`;
+      }
+
+      //   setCookie('dhara', 'surat', 'india');
+
+      console.log(document.cookie);
+
+      function getCookie() {
+        let cookieText = document.cookie;
+        cookieItemList = cookieText.split('; ');
+        // console.log(cookieItemList);
+
+        let cookieDataObj = {};
+        for (let i = 0; i < cookieItemList.length; i++) {
+          let cookieItemArray = cookieItemList[i].split('=');
+          console.log(cookieItemArray);
+
+          cookieDataObj[`${cookieItemArray[0]}`] = cookieItemArray[1];
+        }
+        return cookieDataObj;
+      }
+
+      let cookieData = getCookie();
+
+      console.log(cookieData);
+
+      console.log(cookieData.name);
+      console.log(cookieData.city);
+      console.log(cookieData.country);
+    </script>
+  </body>
+</html>

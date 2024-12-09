@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is p tag</p>
+    <div class="some">This is div tag with some class</div>
+    <div id="special">This is div tah with special id</div>
+    <div class="some thing">This is div tag with some class</div>
+
+    <button>Click me</button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let pEle = $('p');
+      let someClass = $('.some');
+      let someandThingClass = $('.some.thing');
+      let specialId = $('#special');
+      let firstThreeEle = $('p, .some, #special');
+
+      console.log(pEle);
+      console.log(someClass);
+      console.log(someandThingClass);
+      console.log(specialId);
+      console.log(firstThreeEle);
+
+      $('button').click(() => {
+        console.log('Btn clicked');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is p tag</p>
+    <div class="parent">
+      Parent
+      <div class="child">Child</div>
+    </div>
+
+    <input
+      type="text"
+      name=""
+      id=""
+      value="Someone"
+      placeholder="Enter your name"
+    />
+
+    <div class="box"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      console.log($('p').text()); // gives innerText value
+
+      $('p').text('This is new text'); // sets innerText value
+
+      console.log($('.parent').html()); // gives innerHTML value
+      $('.parent').html('<b>This is b tag in parent class </b>'); // sets innerHTML value
+
+      console.log($('input').val()); // gives input value
+
+      $('input').val('Dhara'); // sets input value
+
+      console.log($('.box').css('background-color')); // gets css property value
+      console.log($('.box').css('width'));
+
+      $('.box').css('background-color', 'teal'); // sets css property value
+
+      $('.box').css({
+        width: '300px',
+        height: '300px',
+        'border-radius': '48px',
+        'background-color': 'skyblue',
+      }); // sets multiple css properties
+
+      $('.box').hover(() => {
+        $('.box').animate({ width: '600px', 'background-color': 'red' }, 300);
+      });
+    </script>
+  </body>
+</html>

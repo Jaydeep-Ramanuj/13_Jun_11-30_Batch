@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        padding: 20px;
+        max-width: 500px;
+        border-radius: 24px;
+        border: 2px solid;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="append">append</button>
+    <button class="prepend">prepend</button>
+    <button class="before">before</button>
+    <button class="after">after</button>
+    <br />
+    <div class="box">
+      <p>This is already present in box</p>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const box = $('.box');
+
+      $('.append').click(() => {
+        let newEle = $(
+          '<b>This will be appended (inserted below present elements) in box</b>'
+        );
+        box.append(newEle);
+      });
+      $('.prepend').click(() => {
+        let newEle = $(
+          '<i>This will be prepended (inserted above present elements)  in box</i>'
+        );
+        box.prepend(newEle);
+      });
+      $('.before').click(() => {
+        let newEle = $('<mark>This will be added before box element</mark>');
+        box.before(newEle);
+      });
+      $('.after').click(() => {
+        let newEle = $('<u>This will be added after box element</u>');
+        box.after(newEle);
+      });
+    </script>
+  </body>
+</html>

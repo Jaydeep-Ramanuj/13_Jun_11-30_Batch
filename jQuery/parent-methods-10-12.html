@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 20px;
+        font-size: 18px;
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      parent
+      <div class="child">
+        child
+        <div class="sub-child">
+          sub-child
+          <div class="sub-sub-child">sub-sub-child</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let subSubChild = $('.sub-sub-child');
+
+      console.log(subSubChild.parent()); // immediate parent
+      console.log(subSubChild.parents()); // all parents till the root
+      console.log(subSubChild.parentsUntil('body')); // all parents until specified parent
+    </script>
+  </body>
+</html>

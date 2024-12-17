@@ -1,0 +1,92 @@
+@use 'variables' as var;
+
+@mixin customFlex(
+  $flexDirection: row,
+  $justifyContent: start,
+  $alignItems: start,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  gap: $gap;
+}
+
+@mixin slow() {
+  transition: all 300ms;
+}
+
+@mixin slideUp($dist: -10px) {
+  transform: translateY($dist);
+}
+
+@mixin hover-effect() {
+  @include slow();
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-color: var.$cl1;
+  }
+  20% {
+    background-color: var.$cl2;
+  }
+  40% {
+    background-color: var.$cl3;
+  }
+  60% {
+    background-color: var.$cl4;
+  }
+  80% {
+    background-color: var.$cl5;
+  }
+  100% {
+    background-color: var.$cl6;
+  }
+}
+
+@mixin rotate-animation(
+  $dur: 300ms,
+  $delay: 0,
+  $timing: ease,
+  $count: 1,
+  $dir: normal,
+  $fill: backwards
+) {
+  animation-name: rotate;
+  animation-timing-function: $timing;
+  animation-duration: $dur;
+  animation-delay: $delay;
+  animation-iteration-count: $count;
+  animation-fill-mode: $fill;
+  animation-direction: $dir;
+}
+@mixin rainbow-animation(
+  $dur: 300ms,
+  $delay: 0,
+  $timing: ease,
+  $count: 1,
+  $dir: normal,
+  $fill: backwards
+) {
+  animation-name: rainbow;
+  animation-timing-function: $timing;
+  animation-duration: $dur;
+  animation-delay: $delay;
+  animation-iteration-count: $count;
+  animation-fill-mode: $fill;
+  animation-direction: $dir;
+}

@@ -1,0 +1,23 @@
+@use 'mixins' as mx;
+
+.hover-effect {
+  @include mx.slow();
+  &:hover {
+    @include mx.slideUp();
+  }
+}
+
+.focus-effect {
+  @include mx.slow();
+  &:focus {
+    outline: 2px solid blue;
+  }
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  margin: 50px auto;
+  border-radius: 12px;
+}

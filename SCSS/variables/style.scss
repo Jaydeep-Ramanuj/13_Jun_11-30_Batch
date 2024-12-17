@@ -1,0 +1,65 @@
+// Syntax
+
+// $variable_name:$variable_value
+
+$num1: 10;
+$num2: 60;
+
+// $width: $num * 10;
+
+// Operators
+
+// Arithmetic
+
+@debug $num1 + $num2;
+@debug $num1 - $num2;
+@debug $num1 * $num2;
+@debug $num1 / $num2;
+@debug $num1 % $num2;
+
+// comparison
+
+@debug $num1<$num2;
+@debug $num1<=$num2;
+@debug $num1>$num2;
+@debug $num1>=$num2;
+@debug $num1==$num2;
+
+// logical
+
+@debug true and true;
+@debug true and false;
+@debug false and true;
+@debug false and false;
+
+@debug true or true;
+@debug true or false;
+@debug false or true;
+@debug false or false;
+
+@debug not true;
+@debug not false;
+
+$var1: 100; // number
+$var2: '100'; // string
+$var3: true; // boolean
+$var4: (10, 20, 30); // list, same like array
+$var5: (
+  'physics': 78,
+  'chemistry': 87,
+  'Maths': 90,
+); // map, same like object
+$var6: $var1 + $var2; // expression
+$var7: red; // color
+$var8: 300px; // number with units
+
+@debug $var1;
+@debug $var2;
+@debug $var3;
+@debug $var4;
+@debug $var5;
+@debug $var6;
+@debug $var7;
+@debug $var8;
+
+@debug type-of($value: $var5); // to check data type

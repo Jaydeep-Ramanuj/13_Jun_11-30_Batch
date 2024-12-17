@@ -1,0 +1,34 @@
+.card1 {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  margin: 50px auto;
+  background-color: tomato;
+}
+.card2 {
+  @extend .card1;
+  background-color: teal;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card3 {
+  @extend .card2;
+  background-color: blueviolet;
+  transition: all 300ms;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+.some {
+  border: 2px solid black;
+  outline: 2px solid red;
+  outline-offset: 10px;
+}
+
+.card4 {
+  @extend .card3, .some;
+  background-color: chocolate;
+}

@@ -1,0 +1,15 @@
+@mixin xs() {
+  border-radius: 3px;
+}
+@mixin sm() {
+  border-radius: 6px;
+}
+@mixin md() {
+  border-radius: 8px;
+}
+@mixin lg() {
+  border-radius: 12px;
+}
+@mixin xl() {
+  border-radius: 24px;
+}

@@ -1,0 +1,15 @@
+.card {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card:hover {
+  transform: translate(-10px);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+@use './shadow' as shadow;
+@use './radius' as radius;
+
+@mixin f-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin slow($dur: 300ms, $prop: all) {
+  transition: $prop $dur;
+}
+
+@mixin hover-effect() {
+  @include slow();
+  &:hover {
+    transform: translate(-10px);
+  }
+}
+
+@mixin x-center($my: 0) {
+  margin: $my auto;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  @include x-center(50px);
+  @include f-center();
+  @include hover-effect();
+
+  @include radius.xl();
+  @include shadow.md();
+}

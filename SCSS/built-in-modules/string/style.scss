@@ -1,0 +1,51 @@
+@use 'sass:string';
+
+$str: 'This is some meaningless string';
+
+li {
+  //   list-style: '😁';
+  list-style: '👉';
+}
+
+// li::before {
+//   //   list-style: none;
+//   content: $str;
+// }
+
+li:nth-child(1)::before {
+  content: $str;
+}
+@error 'This is some serious error';
+
+li:nth-child(2)::before {
+  //   content: dhara;
+  content: quote(dhara);
+}
+li:nth-child(3)::before {
+  content: string.index($str, 'some');
+}
+li:nth-child(4)::before {
+  content: string.insert($str, 'special', 15);
+}
+
+li:nth-child(5)::before {
+  content: string.length($str);
+}
+li:nth-child(6)::before {
+  content: string.slice($str, 0, 10);
+}
+li:nth-child(7)::before {
+  content: string.split($str, ' ');
+}
+li:nth-child(8)::before {
+  content: string.to-upper-case($str);
+}
+li:nth-child(9)::before {
+  content: string.to-lower-case($str);
+}
+li:nth-child(10)::before {
+  content: quote(string.unique-id());
+}
+li:nth-child(11)::before {
+  content: unquote('dhara');
+}

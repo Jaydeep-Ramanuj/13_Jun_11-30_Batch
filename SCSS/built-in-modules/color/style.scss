@@ -1,0 +1,31 @@
+@use 'sass:color';
+
+.box {
+  $bg-color: pink;
+  height: 300px;
+  width: 300px;
+  background-color: $bg-color;
+  border-radius: 12px;
+  margin: 50px auto;
+
+  // @debug color.channel($bg-color, $red, $space: null);
+  @debug color.grayscale($bg-color);
+  @debug color.ie-hex-str(red);
+  @debug color.blue(rgb(155, 93, 209));
+
+  &:hover {
+    // background-color: color.adjust($bg-color, $red: 50, $green: 150);
+    // background-color: color.invert($bg-color);
+    // background-color: color.mix(red, blue);
+    // background-color: color.mix(red, green);
+    // background-color: color.mix(blue, green);
+    // background-color: blue;
+    // background-color: adjust-hue(red, 180deg);
+    // background-color: adjust-hue(red, 20deg);
+    background-color: adjust-hue(red, 135deg);
+  }
+
+  //   ::before {
+  //     content: color.channel($bg-color, 'red', $space: null);
+  //   }
+}

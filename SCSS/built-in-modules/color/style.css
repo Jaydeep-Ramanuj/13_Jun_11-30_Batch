@@ -1,0 +1,10 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: pink;
+  border-radius: 12px;
+  margin: 50px auto;
+}
+.box:hover {
+  background-color: #00ff40;
+}/*# sourceMappingURL=style.css.map */

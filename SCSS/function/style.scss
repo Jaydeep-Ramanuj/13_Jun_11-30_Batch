@@ -1,0 +1,27 @@
+$w: 1000px;
+
+@function getWidth($val) {
+  @return $w - $val;
+}
+
+@function findAngle($pattleCount) {
+  @return $pattleCount * 45;
+}
+
+.box {
+  height: 300px;
+  width: getWidth(100px);
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+}
+
+.pattle:nth-child(1) {
+  transform: rotate(findAngle(1));
+}
+.pattle:nth-child(2) {
+  transform: rotate(findAngle(2));
+}
+.pattle:nth-child(3) {
+  transform: rotate(findAngle(3));
+}

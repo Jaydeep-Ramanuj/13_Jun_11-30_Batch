@@ -1,0 +1,19 @@
+.box {
+  height: 300px;
+  width: 900px;
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+}
+
+.pattle:nth-child(1) {
+  transform: rotate(45);
+}
+
+.pattle:nth-child(2) {
+  transform: rotate(90);
+}
+
+.pattle:nth-child(3) {
+  transform: rotate(135);
+}/*# sourceMappingURL=style.css.map */

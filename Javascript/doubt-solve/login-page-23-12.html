@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center font-[sans-serif] sm:h-screen p-4">
+      <div
+        class="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-8"
+      >
+        <div class="text-center mb-12">
+          <a href="javascript:void(0)"
+            ><img
+              src="https://readymadeui.com/readymadeui.svg"
+              alt="logo"
+              class="w-40 inline-block"
+            />
+          </a>
+        </div>
+
+        <form>
+          <div class="space-y-6">
+            <div>
+              <label class="text-gray-800 text-sm mb-2 block">Email Id</label>
+              <input
+                name="email"
+                type="text"
+                id="email"
+                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                placeholder="Enter email"
+              />
+            </div>
+            <div>
+              <label class="text-gray-800 text-sm mb-2 block">Password</label>
+              <input
+                name="password"
+                type="password"
+                id="pass"
+                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                placeholder="Enter password"
+              />
+            </div>
+            <div>
+              <label class="text-gray-800 text-sm mb-2 block"
+                >Confirm Password</label
+              >
+              <input
+                name="cpassword"
+                type="password"
+                id="cpass"
+                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                placeholder="Enter confirm password"
+              />
+            </div>
+
+            <div class="flex items-center">
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label for="remember-me" class="text-gray-800 ml-3 block text-sm">
+                I accept the
+                <a
+                  href="javascript:void(0);"
+                  class="text-blue-600 font-semibold hover:underline ml-1"
+                  >Terms and Conditions</a
+                >
+              </label>
+            </div>
+          </div>
+
+          <div class="!mt-12">
+            <button
+              type="button"
+              id="submit-btn"
+              class="w-full py-3 px-4 text-sm tracking-wider font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+            >
+              Create an account
+            </button>
+          </div>
+          <p class="text-gray-800 text-sm mt-6 text-center">
+            Already have an account?
+            <a
+              href="javascript:void(0);"
+              class="text-blue-600 font-semibold hover:underline ml-1"
+              >Login here</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const emailEle = document.querySelector('#email');
+      const passEle = document.querySelector('#pass');
+      const cPassEle = document.querySelector('#cpass');
+      const submitBtn = document.querySelector('#submit-btn');
+      const checkEle = document.querySelector('#remember-me');
+
+      submitBtn.addEventListener('click', () => {
+        let isEmailValid = validateEmail(emailEle.value);
+        let isPassValid = validatePassword(passEle.value);
+
+        if (
+          isEmailValid &&
+          isPassValid &&
+          passEle.value === cPassEle.value &&
+          checkEle.checked
+        ) {
+          console.log('Success');
+
+          //   let userPass = getUserDetailsFromProvidedEmail(emailEle.value).pass;
+          //   console.log(userPass);
+
+          //   console.log(userPass === passEle.value);
+
+          setUseDetails(5, emailEle.value, passEle.value);
+        } else {
+          console.log('Fail');
+        }
+      });
+
+      function validateEmail(val) {
+        let isEmpty = val.length == 0;
+        let isAtPresent = val.includes('@');
+        let isDotPresent = val.includes('.');
+        let isGT6 = val.length > 6;
+        let isLT30 = val.length < 30;
+        let isAtAndDotTogether = val.includes('@.') || val.includes('.@');
+
+        // console.log(
+        //   !isEmpty &&
+        //     isAtPresent &&
+        //     isDotPresent &&
+        //     !isAtAndDotTogether &&
+        //     isGT6 &&
+        //     isLT30
+        // );
+
+        // return (
+        //   !isEmpty &&
+        //   isAtPresent &&
+        //   isDotPresent &&
+        //   !isAtAndDotTogether &&
+        //   isGT6 &&
+        //   isLT30
+        // );
+
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        return regex.test(val);
+      }
+      function validatePassword(val) {
+        let passwordRegex =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+
+        return passwordRegex.test(val);
+      }
+
+      // For register
+
+      function setUseDetails(id, email, pass, name = '', phone = '') {
+        let userDetails = {
+          name: name,
+          email: email,
+          pass: pass,
+          phone: phone,
+        };
+
+        window.localStorage.setItem(String(id), JSON.stringify(userDetails));
+      }
+      //   setUseDetails(3, 'Dhara', 'dhara@gmail.com', 'Dhara12@', 2351321);
+
+      //   function getUserDetails(email) {
+      //     let user = getUserDetailsFromProvidedEmail('ajay@gmail.com');
+      //   }
+
+      //   getUserDetails();
+
+      // for Login
+
+      function getUserDetailsFromProvidedEmail(email) {
+        let allUserDetails = Object.values(window.localStorage);
+
+        for (let i = 0; i < allUserDetails.length; i++) {
+          let userObj = JSON.parse(allUserDetails[i]);
+          if (userObj.email === email) {
+            return userObj;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

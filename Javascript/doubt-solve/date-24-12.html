@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let d = new Date();
+
+      console.log('getDate:', d.getDate());
+      console.log('getMonth:', d.getMonth());
+      console.log('getFullYear:', d.getFullYear());
+      console.log('getDay:', d.getDay());
+      console.log('getHours:', d.getHours());
+      console.log('getMinutes:', d.getMinutes());
+      console.log('getSeconds:', d.getSeconds());
+      console.log('getTimezoneOffset:', d.getTimezoneOffset());
+      console.log('getUTCHours:', d.getUTCHours());
+
+      console.log(getTodayFullDate());
+
+      function getTodayFullDate() {
+        return `${d.getDate()}/${
+          d.getMonth() + 1
+        }/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()} ${
+          d.getHours() < 12 ? 'AM' : 'PM'
+        }`;
+      }
+
+      console.log(getTodayFullDateInWords());
+
+      function getTodayFullDateInWords() {
+        return `${d.getDate()} ${getMonthName(
+          d.getMonth() + 1
+        )} ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()} ${
+          d.getHours() < 12 ? 'AM' : 'PM'
+        }`;
+      }
+
+      function getMonthName(month) {
+        switch (month) {
+          case 1:
+            return 'January';
+          case 2:
+            return 'February';
+          case 3:
+            return 'March';
+          case 4:
+            return 'April';
+          case 5:
+            return 'May';
+          case 6:
+            return 'June';
+          case 7:
+            return 'July';
+          case 8:
+            return 'August';
+          case 9:
+            return 'September';
+          case 10:
+            return 'October';
+          case 11:
+            return 'November';
+          case 12:
+            return 'December';
+          default:
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.box {
+  width: 300px;
+  height: 600px;
+  border-radius: 12px;
+  background-color: tomato;
+  margin: 50px auto;
+  print: 400px;
+  print: 200px;
+  print: 3000px;
+}
+.some {
+  margin: 10px;
+  padding: 30px;
+  gap: 10px;
+  border-radius: 0px;
+}

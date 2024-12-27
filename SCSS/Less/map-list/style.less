@@ -1,0 +1,50 @@
+@colors:red, blue, green, pink, violet, tomato, yellow, teal;
+
+.bora() {
+  xs: 3px;
+  sm: 6px;
+  md: 8px;
+  lg: 12px;
+  xl: 18px;
+  2xl: 24px;
+  3xl: 32px;
+}
+.p() {
+  0: 3px;
+  1: 6px;
+  2: 8px;
+  3: 12px;
+  4: 18px;
+  5: 24px;
+}
+.m() {
+  0: 3px;
+  1: 6px;
+  2: 8px;
+  3: 12px;
+  4: 18px;
+  5: 24px;
+}
+
+.h() {
+  0: 0%;
+  25: 25%;
+  50: 50%;
+  75: 75%;
+  100: 100%;
+}
+.w() {
+  0: 0%;
+  25: 25%;
+  50: 50%;
+  75: 75%;
+  100: 100%;
+}
+.box {
+  //   height: .h[75];
+
+  height: 100px;
+  width: .w[25];
+  border-radius: .bora[2xl];
+  background-color: extract(@colors, 3);
+}

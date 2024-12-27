@@ -1,0 +1,23 @@
+@w: 300px;
+@h:@w * 2;
+@bora: 12px;
+
+.box {
+  width: @w;
+  height: @h;
+  border-radius: @bora;
+
+  background-color: tomato;
+  margin: 50px auto;
+
+  print: @w + 100px;
+  print: @w - 100px;
+  print: @w * 10px;
+}
+.some {
+  margin: if(@w < 1000px, 10px, 30px);
+  padding: if(@w > 1000px, 10px, 30px);
+  gap: if(@w = 300px, 10px, 30px);
+
+  border-radius: if((@w=300px) and (@h=700px), 1px, 0px);
+}
